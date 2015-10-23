@@ -1,0 +1,68 @@
+<div>
+<!-- partials/Delbi.html -->
+
+<h1>DelBI</h1>
+<hr>
+<div>
+				<!-- <md-content  layout="row" flex="40" ng-controller="BottomSheetExample" class=" bottomSheetdemoBasicUsage">	
+					<div class="bottom-sheet-demo inset "  layout-sm="column" layout-align="center" > -->
+						
+					<md-button flex="10" class="md-primary md-raised" ng-click="showGridBottomSheet($event)" md-whiteframe-z2>Today's Holidays
+					<script type="text/ng-template" id="bottom-sheet-grid-template.html">
+					<md-bottom-sheet class="md-grid md-has-header">
+						<md-list>
+							<md-list-item ng-repeat="item in items">
+								<md-button class="md-grid-item-content" ng-click="gridItemClick($index)">
+									<md-icon md-svg-src="{{item.icon}}"></md-icon>
+									<div class="md-grid-text"> {{ item.name }} </div>
+								</md-button>
+							</md-list-item>
+						</md-list>
+					</md-bottom-sheet>
+					</script> 
+					</md-button>
+		<!-- 			</div>
+					
+					<div ng-if="alert">
+						<br/>
+						<b layout="row" layout-align="center center" class="md-padding">
+							{{alert}}
+						</b>
+					</div>
+			</md-content> -->
+			</div>
+			<div hide-gt-sm>
+					<a href="http://cognosdel/cognos/cgi-bin/cognos.cgi?b_action=xts.run&m=portal/main.xts&startwel=yes" target="_blank">
+					<md-button show-sm class="md-primary md-raised" ng-click="vm.goThere()">
+						
+						<img layout-align-gt-sm="center" ng-src="header/ic_wb_incandescent_white_24dp_1x.png" class="icon" alt="">
+						DelBI
+					</md-button></a>
+</div>
+
+<div layout="row" layout-sm="column" >
+<div  layout-fill ng-controller="AppCtrlDelmar as ctrl" layout="column" class="md-padding"  flex class="content-wrapper">
+	<md-content layout="column" layout-fill flex layout-padding >
+		<h2>DelBI Portal</h2>
+		<div>
+			<iframe layout-fill style="padding:24 px; height:600px; width:1000px;" ng-src="http://cognosdel/cognos/cgi-bin/cognos.cgi?b_action=xts.run&m=portal/main.xts&startwel=yes"></iframe>
+		</div>
+	</md-content>
+	<!-- <md-content hide-gt-sm layout-padding class="md-padding">
+		<h2>DelBI Portal</h2>
+		<div>
+			<iframe  show-sm style="padding:24 px; height:500px;" ng-src="http://cognosdel/cognos/cgi-bin/cognos.cgi?b_action=xts.run&m=portal/main.xts&startwel=yes"></iframe>
+		</div>
+	</md-content> -->
+</div>
+</div> 
+
+<!-- <div layout="row" show-sm  flex class="content-wrapper">
+	<md-content layout="column" flex class="md-padding">
+		<h2>DelBI Portal</h2>
+		<div>
+			<iframe  show-sm ng-src="http://cognosdel/cognos/cgi-bin/cognos.cgi?b_action=xts.run&m=portal/main.xts&startwel=yes">
+		</div>
+	</md-content>
+</div> -->
+</div>

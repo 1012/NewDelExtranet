@@ -1,0 +1,163 @@
+<div>
+<!-- partials/Finance.html -->
+<h1>Finance</h1>
+<hr><!-- 
+<md-list>
+<md-list-item controller="BasicDemoCtrl as ctrl" class="menudemoBasicUsage">
+						<md-menu md-position-mode="target-right target" md-offset="200 0">
+							
+							<md-menu-content width="4" class="">
+								<md-menu-item>
+									<md-button class="md-accent md-hue-3 md-tab" ng-click="vm.goThere()"><span md-menu-align-target>Add Vendor Request</span>
+									</md-button>
+								</md-menu-item>
+								<md-menu-item>
+									<md-button class="md-accent md-hue-3 md-tab" ng-click="vm.goThere()">
+									<span md-menu-align-target>Check Pre-approve</span>
+									</md-button>
+								</md-menu-item>
+								<md-menu-item>
+									<md-button class="md-accent md-hue-3 md-tab" ng-click="vm.goThere()">
+									<span md-menu-align-target>Check Request System</span>
+									</md-button>
+								</md-menu-item>
+								<md-menu-item id="submenu" controller="BasicDemoCtrl as ctrl" class="menudemoBasicUsage">
+									<md-menu md-offset="250 0">	
+										<md-button class="md-accent md-hue-3 md-tab" ng-click="$mdOpenMenu()">
+											<span md-menu-origin md-menu-align-target>Credit & Collection >></span>
+										</md-button>
+									
+											
+										<md-menu-content width="4" >
+											<md-menu-item>
+												<md-button class="md-accent md-hue-3 md-tab" ng-click="ctrl.redial($event)">
+													<span md-menu-align-target="">AR Aging</span>
+													</md-button>
+												</md-menu-item>
+												<md-menu-item>
+													<md-button class="md-accent md-hue-3 md-tab" ng-click="vm.goThere()">
+														<span md-menu-align-target>AR by Department</span>
+													</md-button>
+												</md-menu-item>
+												<md-menu-item>
+													<md-button class="md-accent md-hue-3 md-tab" ng-click="vm.goThere()">
+														<span md-menu-align-target>Download Top AR Accounts</span>
+													</md-button>
+												</md-menu-item>
+												<md-menu-item controller="BasicDemoCtrl as ctrl" class="menudemoBasicUsage">
+													<md-button class="md-accent md-hue-3 md-tab" ng-click="vm.goThere()">
+														<span md-menu-align-target>Purchases Report</span>
+													</md-button>
+												</md-menu-item>
+												<md-menu-item>
+													<md-button class="md-accent md-hue-3 md-tab" ng-click="vm.goThere()">
+														<span md-menu-align-target>Sales by Period</span>
+													</md-button>
+												</md-menu-item>
+												<md-menu-item>
+													<md-button class="md-accent md-hue-3 md-tab" ng-click="vm.goThere()">
+														<span md-menu-align-target>Summary Billing</span>
+													</md-button>
+												</md-menu-item>
+										</md-menu-content>
+										
+									
+									</md-menu>
+								</md-menu-item>
+								
+								<md-menu-item>
+									<md-button class="md-accent md-hue-3 md-tab" ng-click="vm.goThere()">
+									<span md-menu-align-target>List Cheque Pending Processing</span>
+									</md-button>
+								</md-menu-item>
+								<md-menu-item>
+									<md-button class="md-accent md-hue-3 md-tab" ng-click="vm.goThere()">
+									<span md-menu-align-target>List Vendors</span>
+									</md-button>
+								</md-menu-item>
+							</md-menu-content>
+						</md-menu>
+					</md-list-item>
+				</md-list> -->
+				<div layout="row" layout-sm="column" layout-md="column" layout-wrap style="padding-bottom: 32px;">
+	<div flex>	
+			<!-- <md-button class="md-primary md-hue-3 md-raised" ng-click="vm.goThere()"> -->
+			<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+			<md-button  ng-click="vm.goThere()">
+			<span>Add Vendor Request</span>
+			</md-button>
+			</md-whiteframe>
+	</div>
+	<div flex>	
+			<!-- <md-button class="md-primary md-hue-3 md-raised" ng-click="vm.goThere()"> -->
+			<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+			<md-button  ng-click="vm.goThere()">
+				<span>Check Pre-approve</span>
+			</md-button>
+			</md-whiteframe>
+	</div>
+	<div flex>
+			<!-- <md-button class="md-primary md-hue-3 md-raised" ng-click="vm.goThere()"> -->
+			<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+			<md-button  ng-click="vm.goThere()">
+				<span>Check Request System</span>
+			</md-button>
+			</md-whiteframe>
+	</div>
+	<div flex>
+			<!-- <md-button class="md-primary md-hue-3 md-raised" ng-click="vm.goThere()"> -->
+			<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+			<md-button  ng-click="vm.goThere()">
+				<span>Credit & Collection</span>
+			</md-button>
+			</md-whiteframe>			
+	</div>
+	
+
+	<div flex>
+			<!-- <md-button class="md-primary md-hue-3 md-raised" ng-click="vm.goThere()"> -->
+			<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+			<md-button  ng-click="vm.goThere()">
+				<span>List Cheque Pending Processing</span>
+			</md-button>
+			</md-whiteframe>
+	</div>
+	<div flex>
+			<!-- <md-button class="md-primary md-hue-3 md-raised" ng-click="vm.goThere()"> -->
+			<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+			<md-button  ng-click="vm.goThere()">
+				<span>List Vendors</span>
+			</md-button>
+			</md-whiteframe>
+	</div>
+	
+</div>
+<div>
+				<!-- <md-content  layout="row" flex="40" ng-controller="BottomSheetExample" class="md-padding bottomSheetdemoBasicUsage">	
+					<div class="bottom-sheet-demo inset "  layout-sm="column" layout-align="center" > -->
+						
+					<md-button flex="10" class="md-primary md-raised" ng-click="showGridBottomSheet($event)" md-whiteframe-z2>Today's Holidays
+					<script type="text/ng-template" id="bottom-sheet-grid-template.html">
+					<md-bottom-sheet class="md-grid md-has-header">
+						<md-list>
+							<md-list-item ng-repeat="item in items">
+								<md-button class="md-grid-item-content" ng-click="gridItemClick($index)">
+									<md-icon md-svg-src="{{item.icon}}"></md-icon>
+									<div class="md-grid-text"> {{ item.name }} </div>
+								</md-button>
+							</md-list-item>
+						</md-list>
+					</md-bottom-sheet>
+					</script> 
+					</md-button>
+					<!-- </div>
+					
+					<div ng-if="alert">
+						<br/>
+						<b layout="row" layout-align="center center" class="md-padding">
+							{{alert}}
+						</b>
+					</div>
+			</md-content> -->
+			</div>
+</div>

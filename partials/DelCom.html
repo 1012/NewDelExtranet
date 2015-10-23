@@ -1,0 +1,527 @@
+<div class="d_top">
+<!-- partials/Delcom.html -->
+<md-content class="d_top" layout="column" flex  class="md-padding">
+<h1>DelCom</h1>
+<hr>
+<div layout="row" >
+<div layout="column" flex="20" layout-align="center center" layout-sm="column">
+<a href="http://www.delmarcargo.com/polycom_images/polycom.html" target="_blank">
+								<md-button class="md-primary md-raised" ng-click="vm.goThere()">
+									<span md-menu-align-target>PolyCom</span>
+								</md-button>
+								</a>
+</div>
+<div class="bottom-sheet-demo inset"  layout="column" flex="20" layout-align="center center" layout-sm="column" >
+									<md-button flex="10" class="md-primary md-raised" ng-click="showGridBottomSheet($event)" md-whiteframe-z2>Today's Holidays
+										<script type="text/ng-template" id="bottom-sheet-grid-template.html">
+											<md-bottom-sheet class="md-grid md-has-header">
+												<md-list>
+													<md-list-item ng-repeat="item in items">
+														<md-button class="md-grid-item-content" ng-click="gridItemClick($index)">
+															<md-icon md-svg-src="{{item.icon}}"></md-icon>
+															<div class="md-grid-text"> {{ item.name }} </div>
+														</md-button>
+													</md-list-item>
+												</md-list>
+											</md-bottom-sheet>
+										</script> 
+									</md-button>
+								</div>
+							</div>
+<!-- <md-list>
+	<md-list-item controller="BasicDemoCtrl as ctrl" class="menudemoBasicUsage">
+		<md-menu md-offset="200 100">
+			<md-menu-content width="4" class="">
+							<md-menu-item>
+								<a><md-button class="md-accent md-tab" ng-click="vm.goThere()"><span md-menu-align-target>DelCom</span>
+								</md-button></a>
+							</md-menu-item>
+							<!-- <md-menu-item>
+								<a href="http://www.delmarcargo.com/polycom_images/polycom.html" target="_blank">
+								<md-button class="md-accent md-tab" ng-click="vm.goThere()">
+									<span md-menu-align-target>PolyCom</span>
+								</md-button>
+								</a>
+							</md-menu-item> -->
+			<!-- 			</md-menu-content>
+			</md-menu>
+	</md-list-item>
+</md-list> -->
+<!-- <div layout="column" layout-sm="column" flex>
+					<div>
+						<md-content  layout-padding style="height: 700px;padding:24px">
+							<md-tabs md-dynamic-height md-border-bottom flex offset="5">
+								<md-tab label="View My Request">
+									<md-content  layout="column" class="md-padding" >
+										<h1 class="intro2">View My Request</h1>
+										<p>Search for all request that have been submitted by "" based on criteria provided below: </p>  -->
+									<!-- 	<div layout="column" layout-sm="column">
+										<div layout="row" layout-sm="column" flex>
+										<div ng-controller="AppCtrlDelmar as ctrl">
+											<md-content  flex="20" flex-order="1"  class="md-padding">
+											
+												<form ng-submit="$event.preventDefault()">
+													
+														<md-autocomplete
+															ng-disabled="ctrl.isDisabled"
+															md-no-cache="ctrl.noCache"
+															md-selected-item="ctrl.selectedItem"
+															md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+															md-search-text="ctrl.searchText"
+															md-selected-item-change="ctrl.selectedItemChange(item)"
+															md-items="item in ctrl.querySearch(ctrl.searchText)"
+															md-item-text="item.display"
+															md-min-length="0"
+															placeholder="Department">
+															<md-item-template>
+																<span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+															</md-item-template>
+															<md-not-found>
+																No matches found for "{{ctrl.searchText}}".
+															</md-not-found>
+														</md-autocomplete>
+														<br/>
+						
+												</form>
+											</md-content>
+										</div>
+										<div ng-controller="AppCtrlDelmar as ctrl2">
+											<md-content flex="20" flex-order="2"  class="md-padding">
+												<form ng-submit="$event.preventDefault()">
+													
+														<md-autocomplete
+															ng-disabled="ctrl2.isDisabled"
+															md-no-cache="ctrl2.noCache"
+															md-selected-item="ctrl2.selectedItem"
+															md-search-text-change="ctrl2.searchTextChange(ctrl2.searchText)"
+															md-search-text="ctrl2.searchText"
+															md-selected-item-change="ctrl2.selectedItemChange(item)"
+															md-items="item in ctrl2.querySearch(ctrl.searchText2)"
+															md-item-text="item.display"
+															md-min-length="0"
+															placeholder="eTicket">
+															<md-item-template>
+																<span md-highlight-text="ctrl2.searchText" md-highlight-flags="^i">{{item.display}}</span>
+															</md-item-template>
+															<md-not-found>
+																No matches found for "{{ctrl2.searchText}}".
+															</md-not-found>
+														</md-autocomplete>
+														<br/>
+												</form>
+											</md-content>
+										</div> -->
+										<!-- <div ng-controller="AppCtrlDelmar as ctrl2">
+											<md-content flex="20" flex-order="3"  class="md-padding">
+												<form ng-submit="$event.preventDefault()">
+													
+														<md-autocomplete
+															ng-disabled="ctrl2.isDisabled"
+															md-no-cache="ctrl2.noCache"
+															md-selected-item="ctrl2.selectedItem"
+															md-search-text-change="ctrl2.searchTextChange(ctrl2.searchText)"
+															md-search-text="ctrl2.searchText"
+															md-selected-item-change="ctrl2.selectedItemChange(item)"
+															md-items="item in ctrl2.querySearch(ctrl.searchText2)"
+															md-item-text="item.display"
+															md-min-length="0"
+															placeholder="Search">
+															<md-item-template>
+																<span md-highlight-text="ctrl2.searchText" md-highlight-flags="^i">{{item.display}}</span>
+															</md-item-template>
+															<md-not-found>
+																No matches found for "{{ctrl2.searchText}}".
+															</md-not-found>
+														</md-autocomplete>
+														<br/>
+												</form>
+											</md-content>
+										</div>
+										</div>
+										<div layout="row" layout-sm="column" flex>
+										<div ng-controller="AppCtrlDelmar as ctrl">
+											<md-content  flex="20" flex-order="1"  class="md-padding">
+											
+												<form ng-submit="$event.preventDefault()">
+													
+														<md-autocomplete
+															ng-disabled="ctrl.isDisabled"
+															md-no-cache="ctrl.noCache"
+															md-selected-item="ctrl.selectedItem"
+															md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+															md-search-text="ctrl.searchText"
+															md-selected-item-change="ctrl.selectedItemChange(item)"
+															md-items="item in ctrl.querySearch(ctrl.searchText)"
+															md-item-text="item.display"
+															md-min-length="0"
+															placeholder="Status">
+															<md-item-template>
+																<span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+															</md-item-template>
+															<md-not-found>
+																No matches found for "{{ctrl.searchText}}".
+															</md-not-found>
+														</md-autocomplete>
+														<br/>
+						
+												</form>
+											</md-content>
+										</div>
+										<div ng-controller="AppCtrlDelmar as ctrl2" >
+											<md-content flex="20" flex-order="2"  class="md-padding">
+												<form ng-submit="$event.preventDefault()">
+													
+														<md-autocomplete
+															ng-disabled="ctrl2.isDisabled"
+															md-no-cache="ctrl2.noCache"
+															md-selected-item="ctrl2.selectedItem"
+															md-search-text-change="ctrl2.searchTextChange(ctrl2.searchText)"
+															md-search-text="ctrl2.searchText"
+															md-selected-item-change="ctrl2.selectedItemChange(item)"
+															md-items="item in ctrl2.querySearch(ctrl.searchText2)"
+															md-item-text="item.display"
+															md-min-length="0"
+															placeholder="Problem Type">
+															<md-item-template>
+																<span md-highlight-text="ctrl2.searchText" md-highlight-flags="^i">{{item.display}}</span>
+															</md-item-template>
+															<md-not-found>
+																No matches found for "{{ctrl2.searchText}}".
+															</md-not-found>
+														</md-autocomplete>
+														<br/>
+												</form>
+											</md-content>
+										</div> -->
+										<!-- <div ng-controller="AppCtrlDelmar as ctrl2">
+											<md-content flex="20" flex-order="3"  class="md-padding">
+												<form ng-submit="$event.preventDefault()">
+													
+														<md-autocomplete
+															ng-disabled="ctrl2.isDisabled"
+															md-no-cache="ctrl2.noCache"
+															md-selected-item="ctrl2.selectedItem"
+															md-search-text-change="ctrl2.searchTextChange(ctrl2.searchText)"
+															md-search-text="ctrl2.searchText"
+															md-selected-item-change="ctrl2.selectedItemChange(item)"
+															md-items="item in ctrl2.querySearch(ctrl.searchText2)"
+															md-item-text="item.display"
+															md-min-length="0"
+															placeholder="Category">
+															<md-item-template>
+																<span md-highlight-text="ctrl2.searchText" md-highlight-flags="^i">{{item.display}}</span>
+															</md-item-template>
+															<md-not-found>
+																No matches found for "{{ctrl2.searchText}}".
+															</md-not-found>
+														</md-autocomplete>
+														<br/>
+												</form>
+											</md-content>
+										</div>
+										
+										</div>
+									</div>
+									<div ng-controller="AppCtrlDelmar as Ctrl" style="padding: 20px;"  ng-app="DelmarApp" layout="row" layout-sm="column" flex="100">
+									  <md-content>
+										
+										<h5>From</h5>
+										<md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+											
+											<!-- <div class="md-ripple-container"></div> -->
+									
+										
+									
+									<!-- 	<h5>To</h5>
+										<md-datepicker ng-model="myDate" placeholder="Enter date"></md-datepicker>
+										
+									  </md-content>
+									</div>
+								
+										
+									</md-content>
+									
+								</md-tab>
+								<md-tab label="New Request">
+									
+									<md-content  layout="column" class="md-padding" >
+										<h1 class="intro2">New Request</h1>
+										
+										<div layout="row" layout-sm="column">
+										
+										<div ng-controller="AppCtrlDelmar as ctrl3" flex="30">
+											<md-content flex-order="1"  class="md-padding">
+												<form ng-submit="$event.preventDefault()">
+													
+														<md-autocomplete
+															ng-disabled="ctrl.isDisabled"
+															md-no-cache="ctrl.noCache"
+															md-selected-item="ctrl.selectedItem"
+															md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+															md-search-text="ctrl.searchText"
+															md-selected-item-change="ctrl.selectedItemChange(item)"
+															md-items="item in ctrl.querySearch(ctrl.searchText)"
+															md-item-text="item.display"
+															md-min-length="0"
+															placeholder="Select Department">
+															<md-item-template>
+																<span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+															</md-item-template>
+															<md-not-found>
+																No matches found for "{{ctrl.searchText}}".
+															</md-not-found>
+														</md-autocomplete>
+														<br/>
+												</form>
+											</md-content>
+										</div>
+										<div ng-controller="AppCtrlDelmar as ctrl4" flex="30">
+											<md-content flex-order="1"  class="md-padding">
+												<form ng-submit="$event.preventDefault()">
+													
+														<md-autocomplete
+															ng-disabled="ctrl.isDisabled"
+															md-no-cache="ctrl.noCache"
+															md-selected-item="ctrl.selectedItem"
+															md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+															md-search-text="ctrl.searchText"
+															md-selected-item-change="ctrl.selectedItemChange(item)"
+															md-items="item in ctrl.querySearch(ctrl.searchText)"
+															md-item-text="item.display"
+															md-min-length="0"
+															placeholder="Categories">
+															<md-item-template>
+																<span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+															</md-item-template>
+															<md-not-found>
+																No matches found for "{{ctrl.searchText}}".
+															</md-not-found>
+														</md-autocomplete>
+														<br/>
+												</form>
+											</md-content>
+										</div>
+									</div>
+									
+										
+										<div ng-controller="PolicyCtrl" flex="30">
+											<md-content>
+												<div layout="row">
+													<md-content flex-order="1"  class="md-padding">
+													<form name="autocompleteForm">
+														<md-item-template md-whiteframe-z2>
+														<span><input ng-model="query" placeholder="Search"></span>
+														Sort by:
+														<select ng-model="orderProp">
+															<option value="date">Date</option>
+															<option value="categories">Categories</option>
+															<option value="region">Region</option>
+														</select>
+														</md-item-template>
+														<div ng-messages="autocompleteForm.autocomplete.$error">
+															<div ng-message="required">This field is required</div>
+														</div>
+													</form>
+													</md-content> 
+												</div> -->
+												<!-- <md-list>
+													<md-list-item class="md-grid-item-content" ng-repeat="item in policies | filter:query | orderBy:orderProp">
+														<div class="md-list-item-text" layout="column" flex="15">
+															<p>{{ item.date }}</p>
+														</div>
+														<div>   </div>
+														<div class="md-list-item-text" layout="column" flex="40">
+															<p>{{ item.subject }}</p>
+														</div>
+														<div>   </div>
+														<div class="md-list-item-text" layout="column" flex="20">
+															<p>{{ item.categories }}</p>
+														</div>
+														<div>   </div>
+														<div class="md-list-item-text" layout="column"flex="10">
+															<p>{{ item.region }}</p>
+														</div>
+														<md-divider ng-if="!$last"></md-divider>
+													</md-list-item>
+													<md-divider ></md-divider>
+													<md-divider ></md-divider>
+												</md-list> -->
+											</md-content>
+										</div>
+			<!-- 					
+									</md-content>									
+								</md-tab>
+								<md-tab label="Administrator">
+									<md-content  layout="column"  class="md-padding" >
+										<h1 class="intro2">Administrator</h1>
+										
+										<div layout="row" layout-sm="column">
+										<div layout="column" flex="50">
+										<div ng-controller="AppCtrlDelmar as ctrl">
+											<md-content  flex flex-order="1"  class="md-padding">
+												<form ng-submit="$event.preventDefault()">
+													
+														<md-autocomplete
+															ng-disabled="ctrl.isDisabled"
+															md-no-cache="ctrl.noCache"
+															md-selected-item="ctrl.selectedItem"
+															md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+															md-search-text="ctrl.searchText"
+															md-selected-item-change="ctrl.selectedItemChange(item)"
+															md-items="item in ctrl.querySearch(ctrl.searchText)"
+															md-item-text="item.display"
+															md-min-length="0"
+															placeholder="Department">
+															<md-item-template>
+																<span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+															</md-item-template>
+															<md-not-found>
+																No matches found for "{{ctrl.searchText}}".
+															</md-not-found>
+														</md-autocomplete>
+														<br/>
+						
+												</form>
+											</md-content>
+										</div>
+										<div ng-controller="AppCtrlDelmar as ctrl2">
+											<md-content flex-order="1"  class="md-padding">
+												<form ng-submit="$event.preventDefault()">
+													
+														<md-autocomplete
+															ng-disabled="ctrl2.isDisabled"
+															md-no-cache="ctrl2.noCache"
+															md-selected-item="ctrl2.selectedItem"
+															md-search-text-change="ctrl2.searchTextChange(ctrl2.searchText)"
+															md-search-text="ctrl2.searchText"
+															md-selected-item-change="ctrl2.selectedItemChange(item)"
+															md-items="item in ctrl2.querySearch(ctrl.searchText2)"
+															md-item-text="item.display"
+															md-min-length="0"
+															placeholder="eTicket">
+															<md-item-template>
+																<span md-highlight-text="ctrl2.searchText" md-highlight-flags="^i">{{item.display}}</span>
+															</md-item-template>
+															<md-not-found>
+																No matches found for "{{ctrl2.searchText}}".
+															</md-not-found>
+														</md-autocomplete>
+														<br/>
+												</form>
+											</md-content>
+										</div>
+										</div>
+										<div layout="column" flex="50">
+										<div ng-controller="AppCtrlDelmar as ctrl2">
+											<md-content flex-order="1"  class="md-padding">
+												<form ng-submit="$event.preventDefault()">
+													
+														<md-autocomplete
+															ng-disabled="ctrl2.isDisabled"
+															md-no-cache="ctrl2.noCache"
+															md-selected-item="ctrl2.selectedItem"
+															md-search-text-change="ctrl2.searchTextChange(ctrl2.searchText)"
+															md-search-text="ctrl2.searchText"
+															md-selected-item-change="ctrl2.selectedItemChange(item)"
+															md-items="item in ctrl2.querySearch(ctrl.searchText2)"
+															md-item-text="item.display"
+															md-min-length="0"
+															placeholder="Search">
+															<md-item-template>
+																<span md-highlight-text="ctrl2.searchText" md-highlight-flags="^i">{{item.display}}</span>
+															</md-item-template>
+															<md-not-found>
+																No matches found for "{{ctrl2.searchText}}".
+															</md-not-found>
+														</md-autocomplete>
+														<br/>
+												</form>
+											</md-content>
+										</div>
+										<div ng-controller="AppCtrlDelmar as ctrl2" >
+											<md-content flex-order="1"  class="md-padding">
+												<form ng-submit="$event.preventDefault()">
+													
+														<md-autocomplete
+															ng-disabled="ctrl2.isDisabled"
+															md-no-cache="ctrl2.noCache"
+															md-selected-item="ctrl2.selectedItem"
+															md-search-text-change="ctrl2.searchTextChange(ctrl2.searchText)"
+															md-search-text="ctrl2.searchText"
+															md-selected-item-change="ctrl2.selectedItemChange(item)"
+															md-items="item in ctrl2.querySearch(ctrl.searchText2)"
+															md-item-text="item.display"
+															md-min-length="0"
+															placeholder="Reported by">
+															<md-item-template>
+																<span md-highlight-text="ctrl2.searchText" md-highlight-flags="^i">{{item.display}}</span>
+															</md-item-template>
+															<md-not-found>
+																No matches found for "{{ctrl2.searchText}}".
+															</md-not-found>
+														</md-autocomplete>
+														<br/>
+												</form>
+											</md-content>
+										</div>
+										</div>
+										</div>
+										<div ng-controller="AppCtrlDelmar" layout="row" flex>
+											<md-content>
+												<md-list>
+													<md-list-item class="md-grid-item-content" ng-repeat="item in todos | filter:searchText2">
+
+														<div class="md-list-item-text" layout="column" flex="15">
+															<p>{{ item.who }}</p>
+														</div>
+														<div></div>
+														<div class="md-list-item-text" layout="column" flex="60">
+															<p>{{ item.what }}</p>
+														</div>
+														<div></div>
+														<div class="md-list-item-text" layout="column" flex="10">
+															<p>{{ item.notes }}</p>
+														</div>
+														<md-divider ng-if="!$last"></md-divider>
+													</md-list-item>
+													<md-divider ></md-divider>
+													<md-divider ></md-divider>
+												</md-list>
+											</md-content>
+										</div>
+									</md-content>
+								</md-tab>
+							</md-tabs>
+						</md-content>
+					</div>
+				</div>
+</md-content> -->
+<!-- <div>
+				<md-content layout="row" flex="40" ng-controller="BottomSheetExample" class="md-padding bottomSheetdemoBasicUsage">	
+					<div class="bottom-sheet-demo inset "  layout-sm="column" layout-align="center" >
+						
+					<md-button flex="10" class="md-primary md-raised" ng-click="showGridBottomSheet($event)" md-whiteframe-z2>Today's Holidays
+					<script type="text/ng-template" id="bottom-sheet-grid-template.html">
+					<md-bottom-sheet class="md-grid md-has-header">
+						<md-list>
+							<md-list-item ng-repeat="item in items">
+								<md-button class="md-grid-item-content" ng-click="gridItemClick($index)">
+									<md-icon md-svg-src="{{item.icon}}"></md-icon>
+									<div class="md-grid-text"> {{ item.name }} </div>
+								</md-button>
+							</md-list-item>
+						</md-list>
+					</md-bottom-sheet>
+					</script> 
+					</md-button>
+					</div>
+					
+					<div ng-if="alert">
+						<br/>
+						<b layout="row" layout-align="center center" class="md-padding">
+							{{alert}}
+						</b>
+					</div>
+			</md-content>
+			</div>  -->
+</div>

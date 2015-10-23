@@ -1,0 +1,139 @@
+<div>
+<!-- partials/Links.html -->
+<!-- <md-content layout="column" flex  class="md-padding"> -->
+<h1>Links</h1>
+<hr>
+	<div layout="row" layout-sm="column" layout-md="column" layout-wrap style="padding-bottom: 32px;">
+		<div flex>
+			<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+				<a><md-button class="md-raised" ng-click="vm.goThere()"><span>Approved Sites - List</span>
+				</md-button></a>
+		</div>
+		<div flex>
+			<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+				<a href="http://www.delmarcargo.com/en/aci-ams.html" target="_blank">
+					<md-button class="md-raised" ng-click="vm.goThere()"> 
+						<span>ACI/AMS (Forwarder Logic)</span>
+					</md-button>
+				</a>
+			</md-whiteframe>
+		</div>
+		<div flex>
+			<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">	
+					<md-button class="md-raised" ng-click="vm.goThere()">
+						<span>Cargosphere (Deltran)</span>
+					</md-button>
+			</md-whiteframe>
+		</div>
+			<div flex>
+				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">	
+					<md-button class="md-raised" ng-click="vm.goThere()">	
+						<span>DCMS</span>
+					</md-button>
+				</md-whiteframe>
+			</div>
+			<div flex>
+				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">	
+					<a href="http://www.delmarchina.cn/delmar_web/" target="_blank">
+						<md-button class="md-raised" ng-click="vm.goThere()">	
+							<span>Delmar - China Intranet</span>
+						</md-button>
+					</a>
+				</md-whiteframe>
+			</div>
+			<div flex>
+				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">	
+					<a href="http://www.delmarcargo.cn/dm30/portal/menuJumpsub.action?mpid=0&mid=2c9488933feb3826013feb8a1893000c" target="_blank">
+					<md-button class="md-raised" ng-click="vm.goThere()">	
+						<span>Delmar - China Website</span>
+					</md-button></a>
+				</md-whiteframe>
+			</div>
+			<div flex>
+				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">	
+					<a href="http://www.delmarcargo.com/" target="_blank">
+						<md-button class="md-raised" ng-click="vm.goThere()">	
+							<span>Delmar Group Website</span>
+						</md-button>
+					</a>
+				</md-whiteframe>
+			</div>
+			<div flex>
+				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">	
+					<md-button class="md-raised" ng-click="vm.goThere()">	
+						<span>Delmar Mobile</span>
+					</md-button>
+				</md-whiteframe>
+			</div>
+			<div flex>
+				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">	
+					<md-button class="md-raised" ng-click="vm.goThere()">
+						<span>Delmar Webmail</span>
+					</md-button>
+				</md-whiteframe>
+			</div>
+			<div flex>
+				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">	
+					<md-button class="md-raised" ng-click="vm.goThere()">
+						<span>DelTrac</span>
+					</md-button>
+				</md-whiteframe>
+			</div>
+			<div flex>
+				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">	
+					<md-button class="md-raised" ng-click="vm.goThere()">
+						<span>DEL-A-GRAM</span>
+					</md-button>
+				</md-whiteframe>
+			</div>
+			<div flex>
+				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">	
+					<md-button class="md-raised" ng-click="vm.goThere()">
+						<span>3rd Party Tracking Tools</span>
+					</md-button>
+				</md-whiteframe>
+			</div>
+			<div flex>
+				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">	
+					<md-button class="md-raised" ng-click="vm.goThere()">
+						<span md-menu-align-target>Order Promo Items Delmar</span>
+					</md-button>
+				</md-whiteframe>
+			</div>
+			<div flex>
+				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">	
+					<md-button class="md-raised" ng-click="vm.goThere()">
+						<span md-menu-align-target>Today's Holidays</span>
+					</md-button>
+				</md-whiteframe>
+			</div>
+	</div>
+	<div>
+				<!-- <md-content  layout="row" flex="40" ng-controller="BottomSheetExample" class="md-padding bottomSheetdemoBasicUsage">	
+					<div class="bottom-sheet-demo inset "  layout-sm="column" layout-align="center" > -->
+						
+					<md-button flex="10" class="md-primary md-raised" ng-click="showGridBottomSheet($event)" md-whiteframe-z2>Today's Holidays
+					<script type="text/ng-template" id="bottom-sheet-grid-template.html">
+					<md-bottom-sheet class="md-grid md-has-header">
+						<md-list>
+							<md-list-item ng-repeat="item in items">
+								<md-button class="md-grid-item-content" ng-click="gridItemClick($index)">
+									<md-icon md-svg-src="{{item.icon}}"></md-icon>
+									<div class="md-grid-text"> {{ item.name }} </div>
+								</md-button>
+							</md-list-item>
+						</md-list>
+					</md-bottom-sheet>
+					</script> 
+					</md-button>
+					<!-- </div>
+					
+					<div ng-if="alert">
+						<br/>
+						<b layout="row" layout-align="center center" class="md-padding">
+							{{alert}}
+						</b>
+					</div>
+			</md-content> -->
+			</div>
+</div>

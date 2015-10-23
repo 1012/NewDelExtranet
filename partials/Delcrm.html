@@ -1,0 +1,180 @@
+<div>
+<!-- partials/Delcrm.html -->
+
+<h1>Delcrm</h1>
+<hr>
+<div layout="row">
+<div layout-sm="column" layout="column" layout-align="center center">
+<a href="https://crm.delmarcargo.com/index.php?action=Login&module=Users" target="_blank">
+								<md-button class="md-primary md-raised" ng-click="vm.goThere()">
+									<span md-menu-align-target>DelCRM</span>
+								</md-button>
+								</a>
+</div>
+<div layout-sm="column" layout="column" layout-align="center center">
+<a href="https://crm.delmarcargo.com/index.php?action=Login&module=Users" target="_blank">
+								<md-button class="md-primary md-raised" ng-click="vm.goThere()">
+									<span md-menu-align-target>DelCRM Portal</span>
+								</md-button>
+								</a>
+</div>
+<div layout-sm="column" layout="column" layout-align="center center">
+				<div  ng-controller="BottomSheetExample" class="md-padding bottomSheetdemoBasicUsage">	
+					<div class="bottom-sheet-demo inset "  layout-sm="column" layout-align="center center" >
+						
+					<md-button flex="10" class="md-primary md-raised" ng-click="showGridBottomSheet($event)" md-whiteframe-z2>Today's Holidays
+					<script type="text/ng-template" id="bottom-sheet-grid-template.html">
+					<md-bottom-sheet class="md-grid md-has-header">
+						<md-list>
+							<md-list-item ng-repeat="item in items">
+								<md-button class="md-grid-item-content" ng-click="gridItemClick($index)">
+									<md-icon md-svg-src="{{item.icon}}"></md-icon>
+									<div class="md-grid-text"> {{ item.name }} </div>
+								</md-button>
+							</md-list-item>
+						</md-list>
+					</md-bottom-sheet>
+					</script> 
+					</md-button>
+					</div>
+					
+					
+			</div>
+			</div>
+</div>
+
+<div></div>
+
+<!-- <div>
+<h2> <span md-menu-align-target>DelCRM Sales Lead</span></h2>
+</div>
+ -->
+
+
+<div ng-controller="DemoCtrl" layout="column" layout-fill style="padding-bottom: 32px;">
+	<md-whiteframe class="md-whiteframe-z3" layout layout-align="center center">
+			<span><h3 class="md-flex">DelCRM Sales lead</h3></span>
+	</md-whiteframe>
+	<hr>
+  <!-- <md-content  layout-padding layout="row" layout-sm="column" style=" padding: 24px;">
+  <form name="userForm">
+  <div layout layout-sm="column">
+    <md-input-container >
+      <!-- <label>Salutation</label> -->
+   <!--    <input ng-model="user.salutation" placeholder="Salutation">
+    </md-input-container>
+	</div>
+	
+	<hr>
+	<div layout layout-sm="column">
+	<md-input-container flex> -->
+      <!-- <label>First name</label> -->
+          <!-- <input ng-model="user.firstName" placeholder="First Name">
+    </md-input-container>
+	        <md-input-container flex> -->
+          <!-- <label>Last Name</label> -->
+          <!-- <input ng-model="user.lastName" placeholder="Last Name">
+        </md-input-container>
+	
+	</div>
+	<hr>
+	
+	<div layout layout-sm="column">
+	<md-input-container flex> -->
+            <!-- <label>Title:</label> -->
+            <!-- <input ng-model="user.title" placeholder="Title">
+    </md-input-container>
+	<md-input-container flex> -->
+      <!-- <label>First name</label> -->
+          <!-- <input ng-model="user.department" placeholder="Department">
+    </md-input-container>
+	</div>
+	<hr>
+	
+	 <div layout layout-sm="column">
+        <md-input-container flex> -->
+            <!-- <label>Department</label> -->
+            <!-- <input ng-model="user.accountName" placeholder="Account Name">
+         </md-input-container>
+     </div>
+	 <hr>
+	 
+	  <div layout layout-sm="column">
+        <md-input-container flex> -->
+            <!-- <label>Account Name:</label> -->
+            <!-- <input ng-model="user.address" placeholder="Address">
+        </md-input-container>
+      </div>
+	  <hr>
+
+	  <div layout layout-sm="column">
+	  <md-input-container flex> -->
+        <!-- <label>City:</label> -->
+        <!-- <input ng-model="user.city" placeholder="City">
+      </md-input-container>
+	  <md-input-container flex> -->
+        <!-- <label>Province/State:</label> -->
+        <!-- <input ng-model="user.state" placeholder="Province/State">
+      </md-input-container>
+	  </div>
+	  <hr>
+	  
+	  <div layout layout-sm="column">
+	  <md-input-container flex> -->
+        <!-- <label>Postal Code:</label> -->
+        <!-- <input ng-model="user.postalCode" placeholder="Postal Code">
+      </md-input-container>
+	  <md-input-container flex> -->
+        <!-- <label>Postal Code:</label> -->
+        <!-- <input ng-model="user.country" placeholder="Country">
+      </md-input-container>
+	  </div>	  
+	  <hr>
+	  <div layout layout-sm="column">
+	  <md-input-container flex> -->
+        <!-- <label>Country:</label> -->
+        <!-- <input ng-model="user.officePhone" placeholder="Office Phone">
+      </md-input-container>
+	  <md-input-container flex> -->
+        <!-- <label>Country:</label> -->
+        <!-- <input ng-model="user.mobile" placeholder="Mobile">
+      </md-input-container>
+	  <md-input-container flex> -->
+        <!-- <label></label> -->
+        <!-- <input ng-model="user.fax" placeholder="Fax">
+      </md-input-container>
+	  </div>
+	  <hr>
+	  <div layout layout-sm="column">
+	  <md-input-container flex> -->
+      <!-- <label>Email Address</label> -->
+     <!--  <input ng-model="user.email" type="email" placeholder="Email Address">
+    </md-input-container>
+	<md-input-container flex> -->
+          <!-- <label></label> -->
+       <!--    <input ng-model="user.website" placeholder="Website">
+        </md-input-container>
+	  </div>
+		<hr>
+		<div layout layout-sm="column">
+        <md-input-container flex> -->
+          <!-- <label></label> -->
+     <!--      <input ng-model="user.referredBy" placeholder="Referred By">
+        </md-input-container>
+        <md-input-container flex>
+          <label></label>
+          <input ng-model="user.leadSource" placeholder="Lead Source">
+        </md-input-container>
+      </div>
+	  <hr>
+	  <div layout layout-sm="column">
+	  <md-input-container flex> -->
+        <!-- <label>Description:</label> -->
+      <!--   <textarea ng-model="user.description" columns="1" md-maxlength="150" placeholder="Description"></textarea>
+      </md-input-container>
+	  </div>
+  </md-content> -->
+ 
+</div>
+	
+</div>
