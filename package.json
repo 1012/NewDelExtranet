@@ -1,0 +1,44 @@
+{
+  "name": "NewDelExtranet",
+  "description": "AngularJS Delmar Extranet app",
+  "version": "0.0.0",
+  "license": "MIT"
+  "homepage": "https://github.com/1012/NewDelExtranet",
+  "devDependencies": {
+	"bower": "^1.6.5",
+	"http-server": "^0.8.5",
+	"jasmine-core": "^2.3.4",
+	"jasmine-node": "1.14.5",
+    "karma": "~0.13.14",
+	"karma-chrome-launcher": "^0.2.1",
+	"karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.6",
+	"karma-junit-reporter": "^0.2.2",
+	"protractor": "^2.5.1",
+	"shelljs": "^0.5.3"
+  },
+  "url": "margaritamayoralvilla.com",
+  "email": "margaritamayoralvilla@gmail.com",
+  "author": "Margarita Mayoral Villa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1012/NewDelExtranet.git"
+  },
+  "scripts": {
+	"postinstall": "bower install",
+	
+	"prestart": "npm install",
+	"start": "http-server -a localhost -p 8000 -c-1",
+	
+	"pretest": "npm install",
+	"test": "karma start karma.conf.js",
+	"test-single-run": "karma start karma.conf.js --single-run",
+	
+	"preupdate-webdriver": "npm install",
+	"update-webdriver": "webdriver-manager update",
+	
+	"preprotractor": "npm run update-webdriver",
+	"protractor": "protractor e2e-tests/protractor.conf.js",
+	
+	"update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + sed(/sourceMappingURL=angular-loader.min.js.map/,'sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map','app/bower_components/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'app/index-async.html');\""}
+}

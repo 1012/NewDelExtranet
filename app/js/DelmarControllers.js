@@ -5,25 +5,10 @@ angular
 
  {
  
-  var allMaintools = [];
+ 
   var self = this;
   
-  $scope.selected = null;
-  $scope.maintools = allMaintools;
-  $scope.selectMaintool = selectMaintool;
-  $scope.toggleSidenav = toggleSidenav;
-  
-  
-  
-  loadMaintools();
-  
-	$scope.isOpen = false;
-      $scope.demo = {
-        isOpen: false,
-        count: 0,
-        selectedAlignment: 'md-left'
-      };
-	 
+ 	 
 	self.simulateQuery = false;
 	self.isDisabled    = false;
 	//list of 'languages' value/display objects
@@ -32,7 +17,7 @@ angular
 	self.selectedItemChange = selectedItemChange;
 	self.searchTextChange = searchTextChange;
 	
-	$scope.myDate = new Date();
+	 $scope.myDate = new Date();
 
       $scope.minDate = new Date(
         $scope.myDate.getFullYear(),
@@ -91,46 +76,10 @@ angular
   
   $scope.toggleSearch = false;   
   
-  $scope.user ={
-	 salutation: '',
-	 firstName: '',
-	 lastName: '',
-	 title: '',
-	 department: '',
-	 accountName: '',
-	 address: '',
-	 city: '',
-	 state: '',
-	 postalCode: '',
-	 country: '',
-	 officePhone: '',
-	 mobile: '',
-	 fax: '',
-	 email: '',
-	 website: '',
-	 referredBy: '',
-	 leadSource: '',
-	 description: ''
-  };
-  
+ 
       
   
-  // $scope.headers = [
-    // {
-      // name:'',
-      // field:'thumb'
-    // },{
-      // name: 'Name', 
-      // field: 'name'
-    // },{
-      // name:'Description', 
-      // field: 'description'
-    // },{
-      // name: 'Last Modified', 
-      // field: 'last_modified'
-    // }
-  // ];
-    
+  
   //*******************
   // Internal Methods
   //*******************
@@ -138,10 +87,7 @@ angular
   *Search for languages ... use $timeout to simulate
   *remote dataservice call.
   */
- /*  function toggleSidenav(name) {
-    $mdSidenav(name).toggle();
-  }
-*/  
+ 
   function querySearch (query){
 	var results = query?self.languages.filter(createFilterFor(query)): self.languages,
 			deferred;
@@ -171,33 +117,7 @@ angular
 				};
 			});
 		}
-	/**
-	* Create filter function for a query string
-	*/
-/*	function createFilterFor(query){
-		var lowercaseQuery = angular.lowercase(query);
-		return function filterFn(language) {
-		return (language.value.indexOf(lowercaseQuery) === 0);
-		};
-	}*/
-	
-	 function loadMaintools() {
-	MainSidenavService.loadAllTools()
-      .then(function(maintools){
-        allMaintools = maintools;
-        $scope.maintools = [].concat(maintools);
-        $scope.selected = $scope.maintools[0];
-     })
-  }
-  
-  function toggleSidenav(name) {
-    $mdSidenav(name).toggle();
-  }
-  
-  function selectMaintool(maintool) {
-    $scope.selected = angular.isNumber(maintool) ? $scope.maintools[maintool] : maintool;
-    $scope.toggleSidenav('left');
-  }
+
 }])
 
 	

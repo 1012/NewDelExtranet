@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+	<script src="docs-assets/js/ie8-responsive-file-warning.js"></script>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<div style='text-align:center'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>  
+  <![endif]-->
+<!--[if IE]> <link rel="stylesheet" type="text/css" href="all-ie-only.css" /> <![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<!--<![endif]-->
+<html lang="en", ng-app="DelmarApp" class="qp-ui" data-qp-ui="{ 'Futurizr':{ 'hasTouch': 'touch'}}"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable=no" />
+        <title>Delmar Extranet</title>
+        <meta name="description" content="Selecting the most efficient and cost effective transportation option can be challenging. At Delmar, we work with you to create solutions that are flexible and result in the most highly reliable and customizable service in the industry. ">
+        <meta name="keywords" content="Margarita Mayoral Villa, Adriana Molano, Delmar Extranet Angularjs, Angular Material">
+		<meta name="author" content="Margarita Mayoral Villa, Adriana Molano"/>
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="robots" content="index, follow"/>
+		
+		
+		<link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-2.0.0/jasmine_favicon.png">
+		<link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-2.0.0/jasmine.css">
+
+		<script type="text/javascript" src="jasmine/lib/jasmine-2.3.4/jasmine.js"></script>
+		<script type="text/javascript" src="jasmine/lib/jasmine-2.3.4/jasmine-html.js"></script>
+		<script type="text/javascript" src="jasmine/lib/jasmine-2.3.4/boot.js"></script>
+			
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-aria.min.js"></script>
+		<script src="https://gitcdn.xyz/repo/angular/bower-material/v0.11.0/angular-material.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.3/ui-bootstrap.min.js"></script>
+		
+		
+		<link rel="stylesheet" href="https://gitcdn.xyz/repo/angular/bower-material/v0.11.0/angular-material.css">
+		<link rel="stylesheet" href="https://www.delmarcargo.com/css/bootstrap.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="https://www.delmarcargo.com/css/style.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="https://www.delmarcargo.com/css/elements.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css"/>
+		<link rel="stylesheet" src="https://normalize-css.googlecode.com/svn/trunk/normalize.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        
+		<script src="js/DelmarcargoApp.js"></script>
+		<script src="js/DelmarControllers.js"></script>
+		<script src="js/MainSidenavService.js"></script>
+		<script src="js/MainToolsCtrl.js"></script>
+		<script src="js/ThemingProvider.js"></script>
+		<script src="js/stateprovider.js"></script> 
+		<script src="js/RunState.js"></script>
+		<script src="js/RightCtrlSidenav.js"></script> 
+		<script src="js/BottomSheetCtrl.js"></script>
+		<script src="js/TableCtrl.js"></script>
+		<script src="js/PolicyService.js"></script>
+		<script src="js/PolicyCtrl.js"></script>
+		
+		<style type="text/css"> 
+			.d-successful-login-background .d_top {
+				background: #DEDEDE url("https://www.delmarcargo.com/img/backg.jpg") no-repeat center center;
+				background-size: cover;
+				}
+			.boxes-log-in {
+				border:1px solid #DDD; margin-bottom: 95px;  margin-top: 95px; color: #000; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; padding-bottom:10px; padding-right:10px;  background: rgba(223, 231, 242, 0.80); height: 250px;
+				width: 100%;
+				}
+				.contact-box15 .contact-box-form .contact-box-line {
+					padding: 15px 3%;
+					width: 100%;
+					border-radius: 6px;
+					border: 1px solid #dcdcdc; 
+					margin-bottom: 20px;
+					}
+					.contact-box15 .btn{
+						border-color: #337AB7;
+						  background-color: #8dc9dc;
+						  background-color: rgba(223, 231, 242, 0.90);
+						  -moz-border-radius: 20px;
+						  -webkit-border-radius: 20px;
+						  -khtml-border-radius: 20px;
+						  -o-border-radius: 20px;
+						  -ms-border-radius: 20px;
+						  border-radius: 20px;
+						  color: #505050;
+						  font-size: 14px;
+						  width: 125px;
+					}
+			.contact-box15 .contact-box-form .contact-box-line:focus,
+			.contact-box15 .contact-box-form .contact-box-area:focus {
+				border: 1px solid #45c9c3;
+					}
+					.contact-box15 .contact-box-form .contact-box-area {
+						padding: 15px 3%;
+						width: 80%;
+						border: 1px solid #dcdcdc; 
+						resize: none;
+						border-radius: 6px;
+						margin-bottom: 20px;
+						height: 132px;
+					}
+				
+					h3 {
+					font-family: 'Open Sans', Arial, sans-serif;
+					font-weight: 300;
+					line-height: 1.5em;
+					margin-bottom: 18px;
+					text-transform: uppercase;
+					}
+		</style>
+    </head>
+    <body layout="column" ng-controller="AppCtrlDelmar" class="section-material-design md-accent qp-ui qp-ui-mask">
+    
+  
+    <!--=======second=======-->
+		<section id="index" data-title="" style="background-color:#FFFFFF;" >
+			<md-toolbar layout="row" class="md-whiteframe-z1 md-hue-3 " >
+				<!-- <md-button ng-click="toggleSidenav('left')" hide-gt-md class="md-icon-button menuBtn">
+					<md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
+				</md-button> -->
+					<h1 layout-align-gt-sm="center" layout-align="left" class="md-toolbar-tools" fill-height layout-fill><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="240" height="55"></a></h1>
+			
+			</md-toolbar>
+		<div>
+			<div>
+				<div style="height:780px;" >
+					<div  ng-controller="MainToolsCtrl" layout="column" ng-cloak>
+						<md-content flex layout-align="center" class="md-padding">
+							<md-tabs  md-selected="selectedIndex" md-dynamic-height md-autoselect  md-primary flex md-border-bottom>
+									<md-tab  flex ng-repeat="it in maintools"  label="{{it.name}}" ui-sref="{{it.name}}" ui-sref-active="active" ng-class="{'selected' : it === selected}">
+										<div style="padding: 25px; text-align: center;">
+											<md-content  layout="row"  flex class="md-padding" selected="{{selected.name}}">
+												<div ui-view ></div>
+											</md-content>
+										</div>
+									</md-tab>
+							</md-tabs>
+						</md-content>
+					</div>
+				</div>
+			
+			
+		<div class="d_section" >
+			<md-toolbar layout="row" class="">
+            
+					<div class="row" class="md-toolbar-tools" layout-align-gt-sm="center" fill-height layout-align="center center" layout-fill>
+						<div class="footer-copyright"   Style="color:grey">
+								<p> © 2015 Delmar International Inc. All rights reserved. | <a href="legal.html" target="_blank" style="color: #003399;">Legal</a>  </p>
+						</div>
+					</div>
+			</md-toolbar>
+			  </div>
+		</section> 
+	</div>
+           
+		   
+
+	</div>
+	
+
+     
+    </body>
+</html>
