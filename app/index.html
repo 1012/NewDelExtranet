@@ -122,20 +122,72 @@
     
   
     <!--=======second=======-->
-		<section id="index" data-title="" style="background-color:#FFFFFF;" >
-			<md-toolbar layout="row" class="md-whiteframe-z1 md-hue-3 " >
+	<!-- <section id="index" data-title="" style="background-color:#FFFFFF;"  -->
+		<!-- <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2 md-closed ng-isolate-scope md-locked-open" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" tabindex="-1">
+			<h1 layout-align-gt-sm="center" layout-align="center center" class="md-toolbar-tools" fill-height layout-fill><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="240" height="55"></a></h1>
+		</md-sidenav> -->
+		<div>
+			<md-toolbar  class="md-whiteframe-z1 md-hue-3 " >
 				<!-- <md-button ng-click="toggleSidenav('left')" hide-gt-md class="md-icon-button menuBtn">
 					<md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
 				</md-button> -->
-					<h1 layout-align-gt-sm="center" layout-align="left" class="md-toolbar-tools" fill-height layout-fill><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="240" height="55"></a></h1>
-			
-			</md-toolbar>
-		<div>
+				<div layout="row">
+					<div flex="20">
+						<h1 layout-align-gt-sm="center" layout-align="left" class="md-toolbar-tools" fill-height layout-fill><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="240" height="55"></a></h1>
+					</div>
+					<div flex="30">
+					</div>
+					<div flex="50" layout="column" layout-align="right">
+						<div layout-align="right">
+							<div layout="row">
+								<div flex="80">
+								</div>
+								<div flex="20" layout-align="right">
+									<a href="" target="_blank">
+										<md-button class="" ng-click="vm.goThere()">
+											<span md-menu-align-target>Logout</span>
+										</md-button>
+									</a>
+								</div>
+							</div>
+							<div layout="row" ng-controller="BottomSheetExample" class="md-padding bottomSheetdemoBasicUsage" ng-cloak>
+								<div layout="row" flex="80"  md-selected="selectedIndex" >
+									<div>
+										<md-button ng-click="showGridBottomSheet($event)">
+											<span md-menu-align-target>News</span>
+										</md-button>
+									</div>
+									<div>
+										<md-button ng-click="showGridBottomSheet($event)">
+											<span md-menu-align-target>Policy and Procedure</span>
+										</md-button>
+									</div>
+									<div>
+										<md-button ng-click="showGridBottomSheet($event)">
+											<span md-menu-align-target>Today's Holidays</span>
+										</md-button>
+									</div>
+								</div>
+								<div flex="20" layout-align="right">
+									<a href="" target="_blank">
+										<md-button class="" ng-click="vm.goThere()">
+											<span md-menu-align-target>Search</span>
+										</md-button>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</md-toolbar>		
 			<div>
-				<div style="height:780px;" >
-					<div  ng-controller="MainToolsCtrl" layout="column" ng-cloak>
-						<md-content flex layout-align="center" class="md-padding">
-							<md-tabs  md-selected="selectedIndex" md-dynamic-height md-autoselect  md-primary flex md-border-bottom>
+				<div>
+				<div flex="10">
+				</div>
+					<div flex="80" style="height:780px;">
+						<div  ng-controller="MainToolsCtrl" layout="column" layout-margin ng-cloak>
+							<md-content flex layout-align="center" class="md-padding">
+								<md-tabs  md-selected="selectedIndex" md-dynamic-height md-autoselect  md-primary flex md-border-bottom>
 									<md-tab  flex ng-repeat="it in maintools"  label="{{it.name}}" ui-sref="{{it.name}}" ui-sref-active="active" ng-class="{'selected' : it === selected}">
 										<div style="padding: 25px; text-align: center;">
 											<md-content  layout="row"  flex class="md-padding" selected="{{selected.name}}">
@@ -143,30 +195,25 @@
 											</md-content>
 										</div>
 									</md-tab>
-							</md-tabs>
-						</md-content>
-					</div>
-				</div>
-			
-			
-		<div class="d_section" >
-			<md-toolbar layout="row" class="">
-            
-					<div class="row" class="md-toolbar-tools" layout-align-gt-sm="center" fill-height layout-align="center center" layout-fill>
-						<div class="footer-copyright"   Style="color:grey">
-								<p> © 2015 Delmar International Inc. All rights reserved. | <a href="legal.html" target="_blank" style="color: #003399;">Legal</a>  </p>
+								</md-tabs>
+							</md-content>
 						</div>
 					</div>
-			</md-toolbar>
-			  </div>
-		</section> 
-	</div>
-           
-		   
-
-	</div>
-	
-
-     
+					<div flex="10">
+					</div>
+				</div>
+					<div class="d_section" >
+						<md-toolbar layout="row" class="">
+							<div class="row" class="md-toolbar-tools" layout-align-gt-sm="center" fill-height layout-align="center center" layout-fill>
+								<div class="footer-copyright"   Style="color:grey">
+									<p> © 2015 Delmar International Inc. All rights reserved. | <a href="legal.html" target="_blank" style="color: #003399;">Legal</a>  </p>
+								</div>
+							</div>
+						</md-toolbar>
+					</div>
+				
+           </div>
+		</div>
+     <!-- </section> -->
     </body>
 </html>
