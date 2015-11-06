@@ -85,6 +85,64 @@
 				left:5px;
 				font-size:12px;
 				}
+			.d-note-background{
+				padding: 50px 15px 10px 20px;
+				margin:0px 2px 20px 2px;
+				background: #004685;
+				text-align:left;
+				bottom:5px;
+				left:5px;
+				font-size:13px;
+				text-color:#ffffff;
+				
+				}
+			.d-calendar-background{
+				padding: 5px 0px 0 0px;
+				margin:30px 0px 0px 0px;
+				background: #4b4b4b;				
+				font-size:13px;
+				max-width: 305px;
+				
+			}
+			.d-userlog-background{
+				padding: 3px 0px 0 0px;
+				margin:10px 0px 10px 0px;
+				background: #f3f7fa;				
+				font-size:13px;
+				max-width: 280px;
+				
+			}
+			.d-news{
+				margin: 0px 0px 20px 0px;
+			}
+			.md-button.md-fab.d-search{
+				width: 4rem;
+				height:4rem;
+			}
+			.d-search{
+				background-color: #ee3d42;
+				width: 30px;
+				height: 30px;
+				border-radius: 0px 5px 5px 0px;
+				}
+			.md-button.md-fab{
+				width: 8rem;
+				height: 8rem;
+			}
+			.md-button.md-fab.d-avatar{
+				width: 5rem;
+				height: 5rem;
+			}
+			md-autocomplete{
+				height:30px;
+				border-radius: 5px 0px 0px 5px;
+				background: #f3f7fa;
+			}
+			md-icon{
+				width: 35px;
+				height: 35px;
+			}
+			
 			.boxes-log-in {
 				border:1px solid #DDD; margin-bottom: 95px;  margin-top: 95px; color: #000; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; padding-bottom:10px; padding-right:10px;  background: rgba(223, 231, 242, 0.80); height: 250px;
 				width: 100%;
@@ -139,9 +197,9 @@
 		<div style="height:60px; background-color:#004685;">
 			<md-toolbar md-small class="md-accent" style="color:#004685;">
 				<div layout="row" Style="color:#004685">
-					<div flex="80">
+					<div flex="66">
 					</div>
-					<div flex layout-align="center" layout-margin layout-align="center center" >
+					<div flex layout-align="center" layout-margin layout-align="center center" layout="row" >
 						<div ng-controller="AppCtrlDelmar as ctrl2" layout="row">
 											
 												<form flex="20 "ng-submit="$event.preventDefault()">
@@ -169,9 +227,12 @@
 											
 						</div>
 						
-					</div>
-					<div flex layout-align="right" layout-margin layout-align="center center">
-					<div ng-controller="AppCtrlDelmar as ctrl2" layout="row" >
+					<!-- </div>
+					<div flex layout-align="right" layout-margin layout-align="center center"> -->
+					<div ng-controller="AppCtrlDelmar as ctrl1" layout="row" >
+											
+						
+					
 											
 												<form  ng-submit="$event.preventDefault()">
 													
@@ -195,7 +256,12 @@
 															</md-not-found>
 														</md-autocomplete>
 														<br/>
+														
 												</form>
+												<div class="d-search">
+												<img src="Icon/white/search.png" alt="" width="25" height="25">
+												</div>
+												
 											
 						</div>
 					</div>
@@ -216,16 +282,17 @@
 				<div flex="30">
 				</div>
 				<div layout-align="right center" flex="33" hide-gt-sm>
-						<md-content flex>
+					<div class="d-userlog-background">
+						Welcome John Smith
 						<a href="" target="_blank">
 							<md-button class="d-button-menu" ng-click="vm.goThere()">
 								<span>Sign out</span>
 							</md-button>
 						</a>
-						</md-content>
+					</div>
 				</div>
 				</div>
-				<div layout="row" ng-controller="MainToolsCtrl"  ng-cloak>
+				<div layout="row" ng-controller="MainToolsCtrl"  layout-align="center center" ng-cloak>
 					<div flex hide-gt-md>
 						<h1 layout-align-sm="center"  class="md-toolbar-tools" fill-height layout-fill><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="240" height="55"></a></h1>
 					</div>
@@ -236,8 +303,9 @@
 					<md-menu-bar  md-selected="selectedIndex" md-autoselect  hide-sm hide-md md-primary>
 						<md-menu  ng-repeat="it in maintools"  label="{{it.name}}" ui-sref="{{it.name}}" ui-sref-active="active">			
 							<!-- <div style="font-size: 8px;"> -->
-								<md-button class="d-button-menu" md-border-bottom ng-click="selectMaintool(it)" ng-class="{'selected' : it === selected}">
+								<md-button layout-align="center center" class="d-button-menu" md-border-bottom ng-click="selectMaintool(it)" ng-class="{'selected' : it === selected}">
 									{{it.name}}
+									<img src="Icon/down.png" width="13" height="13">
 								</md-button>
 							<!-- </div> -->
 						</md-menu>
@@ -247,23 +315,25 @@
 							
 					
 					<div flex="20" layout-align="right" hide-sm>
-						<md-content>
-						<a href="" target="_blank">
-							<md-button class="d-button-menu" ng-click="vm.goThere()">
+						<div class="d-userlog-background" layout-align="right" >
+						<a class="d-button-menu" href="" target="_blank">
+							<md-button  class="md-fab md-accent d-avatar">
+								<md-icon md-svg-icon="Icon/white/user73.svg"></md-icon>
+							</md-button>
+								Welcome John Smith
+							<md-button class="d-button-menu md-accent" ng-click="vm.goThere()">
 								Sign out
 							</md-button>
 						</a>
-						</md-content>
+						</div>
 					</div>
 				</div>
 			</md-toolbar>	
 		</div>
-		<div style="height:350px;" hide-sm class="d-extranet-background">
-			
-		</div>
+			<div style="height:350px;" hide-sm class="d-extranet-background"></div>
 			<div>
-				<div layout="row">
-					<div flex="66" style="height:400px;">
+				<div layout="row" flex>
+					<div flex >
 						<div style="padding: 25px; text-align: center; font-size: 8px;">
 											<md-content  layout="row"  flex class="md-padding" selected="{{selected.name}}">
 												<div ui-view ></div>
@@ -271,23 +341,22 @@
 						</div>
 					</div>
 				
-					<div flex="33" style='padding: 150px;' ng-cloack>
-						<md-content class="md-primary md-hue-2">
-							<h2 id="TodayDate"></h2>
+					<div flex="20"  hide-sm hide-md style='padding: px;' ng-cloack>
+						<div class="d-calendar-background md-whiteframe-z1">
+						<!-- <md-content class="d-calendar-background md-whiteframe-z1"> -->
+							<!-- {{date | date:'yyyy-MM-dd'}} -->
+							<h2 id="TodayDate" style="color: #f3f7fa;"></h2>
 								<script>
 									var d= new Date();
 									document.getElementById("TodayDate").innerHTML = d.toDateString();
 								</script>
-							<md-calendar  layout-margin  ng-model="myDate">
+						</div>
+						<div class="">
+							<md-calendar ng-model="myDate">
 							</md-calendar>
-						</md-content>
-							<!-- <md-datepicker ng-model="myDate" md-is-locked-open="$mdMedia('gt-md')">
-							</md-datepicker> -->
 						<!-- </md-content> -->
-					<!-- google api key  AIzaSyAZfSLFwp0Sz9DchhYxzq1AaK5by_xfANc -->
-					<!-- OAuth client ID: 646586285809-48ae14f9ra8iv2k9l0lk8ochklr1mtja.apps.googleusercontent.com
-					client secret: 8w1CvQwGLFAHugrdRe1Q3Xos -->
-					<!-- <iframe src="https://calendar.google.com/calendar/embed?title=Customized%20Calendar&amp;showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=300&amp;wkst=1&amp;bgcolor=%23000000&amp;src=en.canadian%23holiday%40group.v.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FToronto" style="border-width:0" width="300" height="300" frameborder="0" scrolling="no"></iframe> -->
+						</div>
+			
 					</div>
 				</div>
 				

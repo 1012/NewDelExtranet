@@ -17,6 +17,8 @@ angular
 	self.selectedItemChange = selectedItemChange;
 	self.searchTextChange = searchTextChange;
 	
+	$scope.date = new Date();
+	
 	 $scope.titleCalendar='Today';
 	 $scope.myDate = new Date();
 		$scope.adjustMonth = function(delta){
