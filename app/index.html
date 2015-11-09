@@ -16,7 +16,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <title>Delmar Extranet</title>
         <meta name="description" content="Selecting the most efficient and cost effective transportation option can be challenging. At Delmar, we work with you to create solutions that are flexible and result in the most highly reliable and customizable service in the industry. ">
         <meta name="keywords" content="Margarita Mayoral Villa, Adriana Molano, Delmar Extranet Angularjs, Angular Material">
@@ -75,6 +75,11 @@
 			.d-extranet-background {
 				background: #DEDEDE url("https://www.delmarcargo.com/DelmarExtranetNew/NewDelExtranet/Img/Extranet-1280x853.png")no-repeat center center;
 				background-size: cover;
+				}
+			.d-extranet-background-slogan {
+				background: transparent  url("https://www.delmarcargo.com/DelmarExtranetNew/NewDelExtranet/Img/Image-text.png")no-repeat center center;
+				background-size: width="501" height="223";
+				
 				}
 			.d-button-menu{
 				padding:0 2px 0 2px;
@@ -278,7 +283,7 @@
 														
 												</form>
 												<div class="d-search">
-												<img src="https://www.delmarcargo.com/DelmarExtranetNew/NewDelExtranet/Icon/White/search.png" alt="" width="25" height="25">
+												<img src="https://www.delmarcargo.com/DelmarExtranetNew/NewDelExtranet/Icon/White/search.png" alt="" width="20" height="20">
 												</div>
 												
 											
@@ -338,20 +343,20 @@
 				<!-- === End middle row for tablets and mobiles ==== -->
 				<!-- ==== Third row (logo) in the toolbar for tablets and mobiles ==== -->
 				<div layout="row" md-whiteframe-z1 flex hide-gt-md layout-align="center center">
-					<div  >
+					<div>
 						<h1   class="md-toolbar-tools"><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="240" height="55"></a></h1>
 					</div>
 				</div>
 				<!-- End logo toolbar for mobiles and tablets -->
 				
 				<!-- ===== Logo and menu toolbar for computers ===== -->				
-				<div layout="row" hide-md hide-sm ng-controller="MainToolsCtrl" ng-cloak>
+				<div layout="row" layout-align="center center" hide-md hide-sm ng-controller="MainToolsCtrl" ng-cloak>
 					<div flex="30" hide-sm hide-md>
 						<h1  layout-align="left" class="md-toolbar-tools" fill-height layout-fill><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="240" height="55"></a></h1>
 					</div> 
 					<div flex="50">
 					<md-menu-bar  md-selected="selectedIndex" md-autoselect  hide-sm hide-md md-primary>
-						<md-menu  ng-repeat="it in maintools"  label="{{it.name}}" ui-sref="{{it.name}}" ui-sref-active="active">			
+						<md-menu   ng-repeat="it in maintools"  label="{{it.name}}" ui-sref="{{it.name}}" ui-sref-active="active">			
 							<!-- <div style="font-size: 8px;"> -->
 								<md-button layout-align="center center" class="d-button-menu" md-border-bottom ng-click="selectMaintool(it)" ng-class="{'selected' : it === selected}">
 									{{it.name}}
@@ -381,7 +386,10 @@
 				</div>
 			</md-toolbar>	
 		</div>
-			<div style="height:350px;" hide-sm class="d-extranet-background"></div>
+			<div style="height:350px;" hide-sm class="d-extranet-background" layout-align="center center">
+				<div layout-align="center center" class="d-extranet-background-slogan" style="height:225px; margin-top:55px; " >
+				</div>
+			</div>
 			<div>
 				<div layout="row" flex>
 					<div flex >
@@ -396,7 +404,7 @@
 						<div class="d-calendar-background md-whiteframe-z1">
 						<!-- <md-content class="d-calendar-background md-whiteframe-z1"> -->
 							<!-- {{date | date:'yyyy-MM-dd'}} -->
-							<h2 id="TodayDate" style="color: #f3f7fa;"></h2>
+							<h2 id="TodayDate" style="color: #f3f7fa; font-size: 22px; padding-bottom: 20px; text-align: center;"></h2>
 								<script>
 									var d= new Date();
 									document.getElementById("TodayDate").innerHTML = d.toDateString();
