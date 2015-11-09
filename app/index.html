@@ -73,7 +73,7 @@
 				background-size: cover;
 				}
 			.d-extranet-background {
-				background: #DEDEDE url("img/Extranet-1280x853.png")no-repeat center center;
+				background: #DEDEDE url("https://www.delmarcargo.com/DelmarExtranetNew/NewDelExtranet/Img/Extranet-1280x853.png")no-repeat center center;
 				background-size: cover;
 				}
 			.d-button-menu{
@@ -112,6 +112,15 @@
 				max-width: 280px;
 				
 			}
+			.d-userlog-background-sm{
+				padding: 0px 0px 0 0px;
+				margin:10px 0px 10px 0px;
+				background: #f3f7fa;				
+				font-size:13px;
+				max-width: 280px;
+				max-height: 50px;
+				
+			}
 			.d-news{
 				margin: 0px 0px 20px 0px;
 			}
@@ -132,6 +141,16 @@
 			.md-button.md-fab.d-avatar{
 				width: 5rem;
 				height: 5rem;
+			}
+			.md-button.md-fab.d-avatar-sm{
+				width: 4rem;
+				height: 4rem;
+				margin: 0px 10px 10px 10px;
+				padding:0px 0px 0px 0px;
+			}
+			.md-button.md-fab.d-avatar-sm md-icon{
+				width: 25px;
+				height: 25px;
 			}
 			md-autocomplete{
 				height:30px;
@@ -259,7 +278,7 @@
 														
 												</form>
 												<div class="d-search">
-												<img src="Icon/white/search.png" alt="" width="25" height="25">
+												<img src="https://www.delmarcargo.com/DelmarExtranetNew/NewDelExtranet/Icon/White/search.png" alt="" width="25" height="25">
 												</div>
 												
 											
@@ -269,36 +288,67 @@
 			</md-toolbar>
 		</div>
   
-    <!--=======second=======-->
+	<!-- ================ Second Toolbar ===================== -->
 	
 		<div>
 			<md-toolbar  class="md-whiteframe-z1" >
-				<div layout="row" flex>
-				<div flex="33">
-				<md-button ng-click="toggleSidenav('left')" hide-gt-md class="md-icon-button menuBtn">
+				<!-- ===== Middle row for tablets and mobiles (Menu icon and user icon) ==== -->
+				<div layout="row"  hide-gt layout-align="center center" flex>
+				<div flex="25" hide-gt-md class="d-userlog-background-sm">
+				<md-button ng-click="toggleSidenav('left')" hide-gt-md class="md-icon-button menuBtn md-accent">
 					<md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
 				</md-button>
+				<span>Menu</span>
 				</div>
-				<div flex="30">
+				<div flex="45">
 				</div>
-				<div layout-align="right center" flex="33" hide-gt-sm>
-					<div class="d-userlog-background">
-						Welcome John Smith
+				<div layout-align="center center" layout="row" flex="30" hide-gt-sm hide-gt>
+					
+					<div   class="d-userlog-background-sm">
+						
+						
+							<md-button   class="md-fab md-accent d-avatar-sm">
+								<md-icon   md-svg-icon="Icon/White/user73.svg"></md-icon>
+							</md-button>
+						
 						<a href="" target="_blank">
-							<md-button class="d-button-menu" ng-click="vm.goThere()">
-								<span>Sign out</span>
+							<md-button style="margin: 12px 10px 0px 0px;" layout-align="center center" class="d-button-menu" ng-click="vm.goThere()">
+								<span>Sign out  </span>
 							</md-button>
 						</a>
+						
 					</div>
 				</div>
+				<!-- ===== second toolbar tablet user icon and sign-out ===== -->
+				<div flex="40" hide-gt-md hide-sm>
+						<div class="d-userlog-background" layout-align="right" >
+						<a  class="d-button-menu" href="" target="_blank">
+							<md-button  class="md-fab md-accent d-avatar-sm">
+								<md-icon md-svg-icon="Icon/White/user73.svg"></md-icon>
+							</md-button>
+								Welcome John Smith
+							<md-button class="d-button-menu md-accent" ng-click="vm.goThere()">
+								Sign out
+							</md-button>
+						</a>
+						</div>
 				</div>
-				<div layout="row" ng-controller="MainToolsCtrl"  layout-align="center center" ng-cloak>
-					<div flex hide-gt-md>
-						<h1 layout-align-sm="center"  class="md-toolbar-tools" fill-height layout-fill><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="240" height="55"></a></h1>
+				<!-- End second toolbar tablet user icon and sign-out  ===== -->
+				</div>
+				<!-- === End middle row for tablets and mobiles ==== -->
+				<!-- ==== Third row (logo) in the toolbar for tablets and mobiles ==== -->
+				<div layout="row" md-whiteframe-z1 flex hide-gt-md layout-align="center center">
+					<div  >
+						<h1   class="md-toolbar-tools"><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="240" height="55"></a></h1>
 					</div>
+				</div>
+				<!-- End logo toolbar for mobiles and tablets -->
+				
+				<!-- ===== Logo and menu toolbar for computers ===== -->				
+				<div layout="row" hide-md hide-sm ng-controller="MainToolsCtrl" ng-cloak>
 					<div flex="30" hide-sm hide-md>
-						<h1 layout-align-sm="center" layout-align="left" class="md-toolbar-tools" fill-height layout-fill><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="240" height="55"></a></h1>
-					</div>
+						<h1  layout-align="left" class="md-toolbar-tools" fill-height layout-fill><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="240" height="55"></a></h1>
+					</div> 
 					<div flex="50">
 					<md-menu-bar  md-selected="selectedIndex" md-autoselect  hide-sm hide-md md-primary>
 						<md-menu  ng-repeat="it in maintools"  label="{{it.name}}" ui-sref="{{it.name}}" ui-sref-active="active">			
@@ -314,11 +364,11 @@
 					
 							
 					
-					<div flex="20" layout-align="right" hide-sm>
+					<div flex="20" layout-align="right" hide-sm hide-md>
 						<div class="d-userlog-background" layout-align="right" >
 						<a class="d-button-menu" href="" target="_blank">
 							<md-button  class="md-fab md-accent d-avatar">
-								<md-icon md-svg-icon="Icon/white/user73.svg"></md-icon>
+								<md-icon md-svg-icon="Icon/White/user73.svg"></md-icon>
 							</md-button>
 								Welcome John Smith
 							<md-button class="d-button-menu md-accent" ng-click="vm.goThere()">
@@ -327,6 +377,7 @@
 						</a>
 						</div>
 					</div>
+					
 				</div>
 			</md-toolbar>	
 		</div>
