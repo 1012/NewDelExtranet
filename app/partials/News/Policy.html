@@ -1,30 +1,33 @@
 <div>
 <!-- partials/News/Policy.html -->
 	<div layout="row" ng-controller="PolicyCtrl" flex>
-		<div layout="column" flex="20">
-		</div>
-		<div layout="column" hide-sm layout-align="space-around" style="font-size: 15px; margin: 20px 30px 50px 90px;" layout-align="center center" class="d-note-background md-hue-1">
+		
+		<div layout="column" hide-sm layout-align="space-around" style="font-size: 15px; margin: 20px 30px 50px 90px;  max-width:900px;" layout-align="center center" class="d-note-background md-hue-1">
 				<div layout="row" layout-align="center center" >
 					<h1 Style="color:white">Policy & Procedure</h1>
 					
 				</div>
 				<md-divider ></md-divider>
 				<div style="font-size: 15px; margin: 50px 0px 0px 0px; color:white;" ng-controller="AppCtrlDelmar" layout="row" layout-align="center center" layout-align="space-around" layout-fill flex class="md-accent">
-						<md-list layout-fill class="md-accent">
+						<md-list layout-fill class="md-primary">
 							<md-list-item  ng-repeat="item in policies | filter:query | orderBy:orderProp">
 								<div class="md-list-item-text" layout="column" flex="15">
+								<h3>Date</h3>
 								<p>{{ item.date }}</p>
 							</div>
 							<div>   </div>
 							<div class="md-list-item-text" layout="column" flex="40">
+								<h3>Subject</h3>
 								<p>{{ item.subject }}</p>
 							</div>
 							<div>   </div>
 							<div class="md-list-item-text" layout="column" flex="20">
+								<h3>Categories</h3>
 								<p>{{ item.categories }}</p>
 							</div>
 							<div>   </div>
 							<div class="md-list-item-text" layout="column"flex="10">
+								<h3>Region</h3>
 								<p>{{ item.region }}</p>
 							</div>
 							<md-divider ng-if="!$last"></md-divider>

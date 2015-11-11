@@ -1,20 +1,20 @@
 <div>
-<!-- partials/News/News2.html -->
+<!-- partials/News/Carrer.html -->
 	<div layout="row" flex>
 		
-		<div layout="column" hide-sm layout-align="space-around" style="font-size: 15px; margin: 20px 30px 50px 90px;  max-width:900px;" layout-align="center center" class="d-note-background md-hue-1">
+		<div layout="column" hide-sm layout-align="space-around" style="font-size: 15px; margin: 20px 30px 50px 90px;  max-width:900px;"  layout-align="center center" class="d-note-background md-hue-1">
 				<div layout="row" layout-align="center center" >
-					<h1 Style="color:white">News</h1>
+					<h1 Style="color:white">Job Openings</h1>
 					
 				</div>
 				<md-divider ></md-divider>
-				<div style="font-size: 15px; margin: 50px 0px 0px 0px; color:white;" ng-controller="AppCtrlDelmar" layout="row" layout-align="center center" layout-align="space-around" layout-fill flex class="md-accent">
+				<div style="font-size: 15px; margin: 50px 0px 0px 0px; color:white; " ng-controller="AppCtrlDelmar" layout="row" layout-align="center center" layout-align="space-around" layout-fill flex class="md-accent">
 					
 						<md-list layout-fill class="md-accent">
 							<md-list-item  ng-repeat="item in todos | filter:searchText2">
 								<div class="md-list-item-text" layout="column" flex="20">
 									<h3>Date</h3>
-									<p>{{ item.who }}</p>
+									<p>{{ item.when }}</p>
 								</div>
 								<div></div>
 								<div class="md-list-item-text" layout="column" flex="60">
@@ -23,7 +23,7 @@
 								</div>
 								<div></div>
 								<div class="md-list-item-text" layout="column" flex="20">
-									<h3>Type</h3>
+									<h3>Internal</h3>
 									<p>{{ item.notes }}</p>
 								</div>
 								<md-divider ng-if="!$last"></md-divider>
