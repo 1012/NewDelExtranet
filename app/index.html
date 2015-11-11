@@ -101,6 +101,19 @@
 				text-color:#ffffff;
 				
 				}
+				.d-note-background .d-shadow{
+				padding: 0px 15px 10px 20px;
+				margin:0px 2px 30px 2px;
+				background: grey;
+				opacity: 0.4;
+				text-align:left;
+				bottom:5px;
+				left:5px;
+				font-size:13px;
+				text-color:#ffffff;
+				border-radius: 6px;
+				max-height: 200px;
+				}
 			.d-calendar-background{
 				padding: 5px 0px 0 0px;
 				margin:30px 0px 0px 0px;
@@ -380,7 +393,7 @@
 			<md-toolbar  class="md-whiteframe-z1"  ng-cloak>
 				<!-- ===== Middle row for tablets and mobiles (Menu icon and user icon) ==== -->
 				<div layout="row"  hide-gt layout-align="center center" flex>
-				<div flex="20" hide-gt-md class="d-userlog-background-sm">
+				<div flex="20" hide-gt-md class="d-userlog-background-sm"ng-controller="MainToolsCtrl">
 				<md-button ng-click="toggleSidenav('left')" hide-gt-md class="md-icon-button menuBtn md-accent">
 					<md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
 				</md-button>
@@ -463,12 +476,38 @@
 				</div>
 			</md-toolbar>	
 		</div>
+			<!-- Sidenav for mobiles -->
+				<div  hide-gt style="font-color: white" hide-gt-md layout="column" flex class="content-wrapper md-accent" ng-controller="MainToolsCtrl" ng-cloak>
+				<md-sidenav  layout="column" class=" md-whiteframe-z1 md-hue-1" md-component-id="left" >
+					<md-list layout-align="center center" >
+						<md-list-item layout-align="center center">
+						<md-button style="color:black;" layout-align="center center" ng-click="close()" class="md-warning" hide-gt-md>
+						Close
+						</md-list-item>
+						</md-button>
+						<md-divider></md-divider>
+						<md-list-item layout-align="center center" ng-repeat="it in maintools">
+							<!-- <md-item-content> -->
+								<a  style="color:black;" ui-sref="{{it.name}}" ui-sref-active="active">
+								<md-button  class="" ng-click="selectMaintool(it)" ng-class="{'selected' : it === selected}">
+								{{it.name}}
+								</md-button></a>
+								<md-divider ng-if="!$last"></md-divider>
+							<!-- </md-item-content> -->
+						</md-list-item>
+							<md-divider ></md-divider>
+								<md-divider ></md-divider>
+					</md-list>
+					
+				</md-sidenav>
+				</div>
+			<!-- End mobiles Sidenav  -->
 			<div style="height:350px;" hide-sm class="d-extranet-background" layout-align="center center">
 				<div layout-align="center center" class="d-extranet-background-slogan" style="height:225px; margin-top:55px; " >
 				</div>
 			</div>
 			<div>
-				<div layout="row" flex style:="margin-top: 150px; height: 1500px;">
+				<div layout="row" flex style:="margin-top: 100px; height: 500px;">
 					<div flex >
 						<div style="padding: 25px; padding-top: 100px; text-align: center; font-size: 8px;">
 											<md-content  layout="row"  flex class="md-padding" selected="{{selected.name}}">
@@ -477,10 +516,8 @@
 						</div>
 					</div>
 				
-					<div flex="20"  hide-sm hide-md style='padding: px;' ng-cloack>
+					<div flex="20"  hide-sm hide-md style='padding-top: 75px;' ng-cloack>
 						<div class="d-calendar-background md-whiteframe-z1">
-						<!-- <md-content class="d-calendar-background md-whiteframe-z1"> -->
-							<!-- {{date | date:'yyyy-MM-dd'}} -->
 							<h2 id="TodayDate" style="color: #f3f7fa; font-size: 22px; padding-bottom: 20px; text-align: center;"></h2>
 								<script>
 									var d= new Date();
@@ -490,7 +527,6 @@
 						<div class="">
 							<md-calendar ng-model="myDate">
 							</md-calendar>
-						<!-- </md-content> -->
 						</div>
 			
 					</div>

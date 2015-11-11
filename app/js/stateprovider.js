@@ -15,7 +15,7 @@ angular
         // Here we are just setting up some convenience urls.
 	
 	// For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/partials/News")
+  $urlRouterProvider.otherwise("/partials/News/News2")
   //
   // Now set up the states
    //////////
@@ -27,6 +27,26 @@ angular
       url: '/partials/News',
       templateUrl: 'partials/News.html'
     })
+		.state('News.News2',{
+			//ui-view inside News.html.
+			url: '/News2',
+			templateUrl: 'partials/News/News2.html'
+		})
+		.state('News.Policy',{
+			// ui-view inside News.html.
+			url: '/Policy',
+			templateUrl: 'partials/News/Policy.html'	
+		})
+		.state('News.Holidays',{
+			// ui-view inside News.html.
+			url: '/partials/Holidays',
+			templateUrl: 'partials/Holidays.html'
+		})
+		.state('News.Carrer',{
+			// ui-view inside News.html.
+			url: '/partials/Carrer',
+			templateUrl: 'partials/Carrer.html'
+		})
 	.state('Admin', {
 		// Use a url of "/" to set a state as the "index".
       url: '/partials/Admin',

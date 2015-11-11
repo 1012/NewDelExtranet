@@ -1,9 +1,7 @@
 <div>
 <!-- partials/News.html -->
 	<div layout="row" layout-md="column">
-		<div layout="column" hide-md hide-sm flex="20" class="d-note-background md-hue-1" md-whiteframe-z1>
-			<!-- <div layout="column" layout-md-sm="row" class="d-note-background md-hue-1"> -->
-				<!-- <md-content class="md-accent d-note-background" md-whiteframe-z1 md-padding md-margin> -->
+		<div layout="column" hide-md hide-sm flex="20" class="d-note-background md-hue-1" md-whiteframe-z1 style="max-height: 400px;">
 					<div>
 					<p style="color: #f3f7fa;">If you are unable to find a Policy or Procedure, or have any comments or questions please <a style="color: #ee3d42;">click here</a>.</p>
 					</div>
@@ -20,18 +18,20 @@
 				<!-- </md-content> -->
 			<!-- </div> -->
 		</div>
+		
 		<div layout="column" layout-margin layout-fill class="d-news">
 			<h1>News and Policy & Procedure</h1>
 			<hr>		
+	
 			<div layout="row" hide-sm layout-align="space-around" layout-align="center center">
 				<div layout="column" layout-align="center center">
-					<md-button class="md-fab md-accent" md-whiteframe-z1>
+					<md-button class="md-fab md-accent" layout-align="center center" ui-sref=".News2" ui-sref-active="active">
 						<md-icon md-svg-icon="Icon/White/news12.svg"></md-icon>
 					</md-button>
 					<h3 class="md-title">News</h3>
 				</div>
 				<div layout="column" layout-align="center center">
-					<md-button  class="md-fab md-accent">
+					<md-button  class="md-fab md-accent" md-whiteframe-z1 ui-sref=".Policy" ui-sref-active="active">
 						<md-icon md-svg-icon="Icon/White/lock74.svg"></md-icon>
 					</md-button>
 					<h3 class="md-title">Policy & Procedure</h3>
@@ -76,11 +76,18 @@
 				</div>
 			</div>
 			
-			
+						<div flex >
+		<div style="padding: 25px; padding-top: 0px; text-align: center; font-size: 8px;">
+			<md-content  layout="row"  flex class="md-padding">
+				<div ui-view ></div>
+			</md-content>
 		</div>
-		
 	</div>
-	<div layout="row" flex>
+		</div>
+	
+	</div>
+	
+	<!-- <div layout="row" flex>
 		<div layout="column" flex="20">
 		</div>
 		<div layout="column" hide-sm layout-align="space-around" style="font-size: 15px; margin: 20px 30px 50px 90px;" layout-align="center center" class="d-note-background md-hue-1">
@@ -113,7 +120,9 @@
 				</div>
 				
 		</div>
-	</div>
+	</div> -->
+	
+	
 	<div layout="row"  layout-align="center center">
 		
 		<div layout="column" hide-gt hide-md hide-gt-md  layout-align="space-around" style="font-size: 15px; margin-top: 20px" layout-align="center center" class="d-note-background md-hue-1">
@@ -145,6 +154,41 @@
 					
 				</div>
 				
+		</div>
+	</div>
+	
+	<div layout="row"  ng-controller="PolicyCtrl" flex>
+		
+		<div layout="column" hide-gt hide-md hide-gt-md layout-align="space-around" style="font-size: 15px; margin-top: 20px;" layout-align="center center" class="d-note-background md-hue-1">
+				<div layout="row" layout-align="center center" >
+					<h1 Style="color:white">Policy & Procedure</h1>
+					
+				</div>
+				<md-divider ></md-divider>
+				<div style="font-size: 10px; margin: 20px 0px 0px 0px; color:white;" ng-controller="AppCtrlDelmar" layout="row" layout-align="center center" layout-align="space-around" layout-fill flex class="md-accent">
+						<md-list layout-fill class="md-accent">
+							<md-list-item  ng-repeat="item in policies | filter:query | orderBy:orderProp">
+								<div class="md-list-item-text" layout="column" flex="15">
+								<p>{{ item.date }}</p>
+							</div>
+							<div>   </div>
+							<div class="md-list-item-text" layout="column" flex="35">
+								<p>{{ item.subject }}</p>
+							</div>
+							<div>   </div>
+							<div class="md-list-item-text" layout="column" flex="30">
+								<p>{{ item.categories }}</p>
+							</div>
+							<div>   </div>
+							<div class="md-list-item-text" layout="column"flex="20">
+								<p>{{ item.region }}</p>
+							</div>
+							<md-divider ng-if="!$last"></md-divider>
+							</md-list-item>
+							<md-divider ></md-divider>
+							<md-divider ></md-divider>
+						</md-list>
+				</div>
 		</div>
 	</div>
 	
