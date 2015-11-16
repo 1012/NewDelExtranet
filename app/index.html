@@ -31,7 +31,9 @@
 		<script type="text/javascript" src="jasmine/lib/jasmine-2.3.4/jasmine.js"></script>
 		<script type="text/javascript" src="jasmine/lib/jasmine-2.3.4/jasmine-html.js"></script>
 		<script type="text/javascript" src="jasmine/lib/jasmine-2.3.4/boot.js"></script>
-			
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		
+		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.min.js"></script>
@@ -40,6 +42,9 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.3/ui-bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-resource.min.js"></script>
+		
+
 		
 		
 		<link rel="stylesheet" href="https://gitcdn.xyz/repo/angular/bower-material/v0.11.0/angular-material.css">
@@ -48,9 +53,11 @@
 		<link rel="stylesheet" href="https://www.delmarcargo.com/css/elements.css" type="text/css" media="screen">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css"/>
 		<link rel="stylesheet" src="https://normalize-css.googlecode.com/svn/trunk/normalize.css" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		
+		
         
 		<script src="js/DelmarcargoApp.js"></script>
 		<script src="js/DelmarControllers.js"></script>
@@ -64,6 +71,7 @@
 		<script src="js/TableCtrl.js"></script>
 		<script src="js/PolicyService.js"></script>
 		<script src="js/PolicyCtrl.js"></script>
+		<script src="js/newsFeedCtrl.js"></script>
 		<script src="js/quickstart.js"></script>
 		
 		
@@ -91,7 +99,7 @@
 				font-size:12px;
 				}
 			.d-note-background{
-				padding: 50px 15px 10px 20px;
+				padding: 60px 15px 10px 20px;
 				margin:0px 2px 20px 2px;
 				background: #004685;
 				text-align:left;
@@ -237,74 +245,59 @@
 					</div>
 					<div flex="15" flex-sm="20" Style="padding-top: 15px;">
 						<div ng-controller="AppCtrlDelmar as ctrl2">
-											
-												<form ng-submit="$event.preventDefault()">
-													
-														<md-autocomplete
-															ng-disabled="ctrl2.isDisabled"
-															md-no-cache="ctrl2.noCache"
-															md-selected-item="ctrl2.selectedItem"
-															md-search-text-change="ctrl2.searchTextChange(ctrl2.searchText)"
-															md-search-text="ctrl2.searchText"
-															md-selected-item-change="ctrl2.selectedItemChange(item)"
-															md-items="item in ctrl2.querySearch(ctrl.searchText2)"
-															md-item-text="item.display"
-															md-min-length="0"
-															placeholder="Language">
-															<md-item-template>
-																<span md-highlight-text="ctrl2.searchText" md-highlight-flags="^i">{{item.display}}</span>
-															</md-item-template>
-															<md-not-found>
-																No matches found for "{{ctrl2.searchText}}".
-															</md-not-found>
-														</md-autocomplete>
-														<br/>
-												</form>
-											
-						</div>
-						
+							<form ng-submit="$event.preventDefault()">
+								<md-autocomplete
+									ng-disabled="ctrl2.isDisabled"
+									md-no-cache="ctrl2.noCache"
+									md-selected-item="ctrl2.selectedItem"
+									md-search-text-change="ctrl2.searchTextChange(ctrl2.searchText)"
+									md-search-text="ctrl2.searchText"
+									md-selected-item-change="ctrl2.selectedItemChange(item)"
+									md-items="item in ctrl2.querySearch(ctrl.searchText2)"
+									md-item-text="item.display"
+									md-min-length="0"
+									placeholder="Language">
+										<md-item-template>
+											<span md-highlight-text="ctrl2.searchText" md-highlight-flags="^i">{{item.display}}</span>
+										</md-item-template>
+										<md-not-found>
+											No matches found for "{{ctrl2.searchText}}".
+										</md-not-found>
+								</md-autocomplete>
+								<br/>
+							</form>
+						</div>						
 					</div>
 					<div flex="15" flex-sm="20" Style="padding-top: 15px;">
 						<div layout="row">
-						<div ng-controller="AppCtrlDelmar as ctrl1"  >
-											
-						
-					
-											
-												<form  flex ng-submit="$event.preventDefault()">
-													
-														<md-autocomplete
-															
-															ng-disabled="ctrl2.isDisabled"
-															md-no-cache="ctrl2.noCache"
-															md-selected-item="ctrl2.selectedItem"
-															md-search-text-change="ctrl2.searchTextChange(ctrl2.searchText)"
-															md-search-text="ctrl2.searchText"
-															md-selected-item-change="ctrl2.selectedItemChange(item)"
-															md-items="item in ctrl2.querySearch(ctrl.searchText2)"
-															md-item-text="item.display"
-															md-min-length="0"
-															placeholder="Search">
-															<md-item-template flex="20">
-																<span md-highlight-text="ctrl2.searchText" md-highlight-flags="^i">{{item.display}}</span>
-															</md-item-template>
-															<md-not-found>
-																No matches found for "{{ctrl2.searchText}}".
-															</md-not-found>
-														</md-autocomplete>
-														<br/>
-														
-												</form>
-												
-												
-											
+							<div ng-controller="AppCtrlDelmar as ctrl1">																						
+								<form  flex ng-submit="$event.preventDefault()">													
+									<md-autocomplete
+										ng-disabled="ctrl2.isDisabled"
+										md-no-cache="ctrl2.noCache"
+										md-selected-item="ctrl2.selectedItem"
+										md-search-text-change="ctrl2.searchTextChange(ctrl2.searchText)"
+										md-search-text="ctrl2.searchText"
+										md-selected-item-change="ctrl2.selectedItemChange(item)"
+										md-items="item in ctrl2.querySearch(ctrl.searchText2)"
+										md-item-text="item.display"
+										md-min-length="0"
+										placeholder="Search">
+											<md-item-template flex="20">
+												<span md-highlight-text="ctrl2.searchText" md-highlight-flags="^i">{{item.display}}</span>
+											</md-item-template>
+											<md-not-found>
+												No matches found for "{{ctrl2.searchText}}".
+											</md-not-found>
+									</md-autocomplete>
+									<br/>
+								</form>																																
+							</div>
+							<div  class="d-search">
+								<img src="https://www.delmarcargo.com/DelmarExtranetNew/NewDelExtranet/Icon/White/search.png" alt="" width="20" height="20">
+							</div>
 						</div>
-						<div  class="d-search">
-						<img src="https://www.delmarcargo.com/DelmarExtranetNew/NewDelExtranet/Icon/White/search.png" alt="" width="20" height="20">
-						</div>
-					</div>
-					</div>
-					
+					</div>					
 				</div> 
 			</md-toolbar>
 			<!-- End toolbar computer screen size -->
@@ -507,7 +500,7 @@
 				</div>
 			</div>
 			<div>
-				<div layout="row" flex style:="margin-top: 100px; height: 500px;">
+				<div layout="row" flex style:="margin-top: 200px; height: 900px;">
 					<div flex >
 						<div style="padding: 25px; padding-top: 100px; text-align: center; font-size: 8px;">
 											<md-content  layout="row"  flex class="md-padding" selected="{{selected.name}}">

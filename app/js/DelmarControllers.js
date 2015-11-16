@@ -1,11 +1,14 @@
 'use strict';
+// console.log("loading controller ...");
+
 angular
 	.module('DelmarApp')
 		.controller('AppCtrlDelmar', ['$scope', 'MainSidenavService', '$mdSidenav', '$location', '$http', '$timeout', '$q', '$log', function($scope, MainSidenavService, $mdSidenav,$location,$http, $timeout, $q, $log)
 
  {
  
- 
+
+	
   var self = this;
   
  	 
@@ -38,6 +41,7 @@ angular
         $scope.myDate.getMonth() + 2,
         $scope.myDate.getDate());
 	
+	// $scope.feeds = BlogList.get();
 	
     $scope.todos = [
       {

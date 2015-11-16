@@ -15,7 +15,7 @@ angular
         // Here we are just setting up some convenience urls.
 	
 	// For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/partials/News/News2.html")
+  $urlRouterProvider.otherwise("/partials/News/News2")
   //
   // Now set up the states
    //////////

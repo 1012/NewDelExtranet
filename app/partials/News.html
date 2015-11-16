@@ -138,21 +138,21 @@
 					
 				</div>
 				<md-divider ></md-divider>
-				<div style="font-size: 10px; margin: 20px 0px 0px 0px; color:white;" ng-controller="AppCtrlDelmar" layout="row" layout-align="center center" layout-align="space-around" layout-fill flex class="md-accent">
+				<div style="font-size: 10px; margin: 20px 0px 0px 0px; color:white;" ng-controller="newsFeedCtrl" layout="row" layout-align="center center" layout-align="space-around" layout-fill flex class="md-accent">
 					
 						<md-list layout-fill class="md-accent">
 							<md-list-item  ng-repeat="item in todos | filter:searchText2">
 								<div class="md-list-item-text" layout="column" flex="20">
-									<p>{{ item.who }}</p>
+									<p>{{ newsData.news.date }}</p>
 								</div>
 								<div></div>
 								<div class="md-list-item-text" layout="column" flex="60">
-									<p>{{ item.what }}</p>
+									<p>{{ newsData.news.title }}</p>
 								</div>
 								<div></div>
-								<div class="md-list-item-text" layout="column" flex="20">
+								<!-- <div class="md-list-item-text" layout="column" flex="20">
 									<p>{{ item.notes }}</p>
-								</div>
+								</div> -->
 								<md-divider ng-if="!$last"></md-divider>
 							</md-list-item>
 								<md-divider ></md-divider>
