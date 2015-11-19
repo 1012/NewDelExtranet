@@ -1,56 +1,137 @@
 <div>
 <!-- partials/News/News2.html -->
-	<div layout="row" flex ng-cloak>
-		
-		
-		<div layout="column" ng-controller="newsFeedCtrl" hide-sm layout-align="space-around" style="font-size: 15px; margin: 20px 30px 50px 90px;  max-width:900px;" layout-align="center center" class="d-note-background md-hue-1">
-				<div layout="row" layout-align="center center" >
+	<div layout="row" hide-md hide-sm ng-controller="newsFeedCtrl" flex ng-cloak>
+		<div layout="column" style="font-size: 15px; margin: 20px 30px 0px 90px;  max-width:1000px;"  layout-align="center center" layout-fill class="d-note-background md-hue-1">
+				<div layout="row" layout-align="center center">
 					<h1 Style="color:white;">News</h1>
-					<md-divider ></md-divider>
 				</div>
 				<md-divider ></md-divider>
-				<div  layout="row" class="input-group search-bar" style="margin: 20px 0px 0px 0px;">
-					<input type="text" ng-model="search2" ng-change="change()" onclick="select()" class="form-control" placeholder="Date" autofocus />
-					<span class="input-group-addon bar-style"><i class="glyphicon glyphicon-search"></i></span>
-					<div style="width:px"></div>
+				<div  layout="row"  class="input-group" style="margin:20px 0px 10px 0px;">
+					<input type="text" ng-model="search2" ng-change="change()" onclick="select()" class="form-control"  placeholder="Date" autofocus />
+					<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>	
 					<input type="text" ng-model="search" ng-change="change()" onclick="select()" class="form-control"  placeholder="Search" autofocus />
-					<span class="input-group-addon bar-style"><i class="glyphicon glyphicon-search"></i></span>
+					<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
 				</div>
-				<div  style="font-size: 15px; margin: 5px 0px 0px 0px; color:white;" layout="column" layout-align="center center" layout-align="space-around" layout-fill flex class="md-accent" ng-cloak>
-					
-						<div>
-						<md-list layout-fill class="md-accent">
-							<md-list-item  ng-repeat="item in newsData | orderBy:'created_at':true | filter:search |startFrom:currentPage*pageSize|limitTo:pageSize">
-								<div class="md-list-item-text" layout="column" flex="20">
+				<div style="font-size: 15px; margin: 0px 0px 0px 0px; color:white;" layout="row" layout-align="left" ng-cloak>	
+						<md-list style="width:900px">
+							<md-list-item  ng-repeat="item in newsData | orderBy:'created_at':reverse | filter:search |filter:search2 | startFrom:currentPage*pageSize|limitTo:pageSize">
+								<div  layout="column" flex="20" layout-align="left">
 									<p>{{item.date}}</p>
 								</div>
 								<div></div>
-								<div  class="md-list-item-text" layout="column" flex="80">
-									<a href="{{item.url}}" class="md-button"target="_blank">
+								<div layout="column" flex="70" layout-align="left">
+									<a style="color:white;" href="{{item.url}}" class=""target="_blank">
 									<p>{{item.title}}</p>
 									</a>
 								</div>
 								<div></div>
-								<md-divider ng-if="!$last"></md-divider>
-								
+								<md-divider ng-if="!$last"></md-divider>								
 							</md-list-item>
-							
-								<md-divider ></md-divider>
-								<md-divider ></md-divider>
+							<md-divider ></md-divider>
+							<md-divider ></md-divider>
 						</md-list>
-					</div>
-					<div>
-					<button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1" style="color:black">
+				</div>	
+				<div  layout="row" layout-align="center center" >
+					<md-button  ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1" style="color:white">
 							Previous
-						</button>
+					</md-button>
 							{{currentPage+1}}/{{numberOfPages()}}
-						<button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1" Style="color:black">
+						<md-button  ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1" Style="color:white">
 								Next
-						</button>	
-					</div>
-						
+						</md-button>	
 				</div>
-				
-		</div> 
+						
+		</div>
 	</div>
-</div>
+	<!-- News2 Tablet -->
+	<div layout="row" hide-gt-md hide-sm ng-controller="newsFeedCtrl" flex ng-cloak>
+		<div layout="column" layout-padding layout-margin style="font-size: 15px; width:700px"  md-whiteframe-z1 class="d-note-background md-hue-1">
+				<div layout="row" layout-align="center center">
+					<h1 Style="color:white;">News</h1>
+				</div>
+				<md-divider ></md-divider>
+				<div  layout="row"  class="input-group" style="margin:20px 0px 10px 0px;">
+					<input type="text" ng-model="search2" ng-change="change()" onclick="select()" class="form-control"  placeholder="Date" autofocus />
+					<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>	
+					<input type="text" ng-model="search" ng-change="change()" onclick="select()" class="form-control"  placeholder="Search" autofocus />
+					<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+				</div>
+				<div style="font-size: 13px; margin: 0px 0px 0px 0px; color:white;" layout="row" layout-align="center center" ng-cloak>	
+						<md-list style="width:600px">
+							<md-list-item  ng-repeat="item in newsData | orderBy:'created_at':reverse | filter:search |filter:search2 | startFrom:currentPage*pageSize|limitTo:pageSize">
+								<div  layout="column" flex="20" layout-align="left">
+									<p>{{item.date}}</p>
+								</div>
+								<div></div>
+								<div   layout="column" flex="80" layout-align="left">
+									<a style="color:white;" href="{{item.url}}" target="_blank">
+									<p>{{item.title}}</p>
+									</a>
+								</div>
+								<div></div>
+								<md-divider ng-if="!$last"></md-divider>								
+							</md-list-item>
+							<md-divider ></md-divider>
+							<md-divider ></md-divider>
+						</md-list>
+				</div>	
+				<div  layout="row" layout-align="center center" >
+					<md-button  ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1" style="color:white">
+							Previous
+					</md-button>
+							{{currentPage+1}}/{{numberOfPages()}}
+						<md-button  ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1" Style="color:white">
+								Next
+						</md-button>	
+				</div>
+						
+		</div>
+	</div>
+	<!-- End news2 Tablet -->
+	<!-- News2 mobile -->
+	<div layout="row" hide-gt hide-gt-md hide-md ng-controller="newsFeedCtrl" flex ng-cloak>
+		<div layout="column"  style="font-size: 15px;" layout-align="space-around" md-whiteframe-z1 class="d-note-background md-hue-1">
+				<div layout="row" layout-align="center center">
+					<h1 Style="color:white;">News</h1>
+				</div>
+				<md-divider ></md-divider>
+				<div  layout="row"  class="input-group" style="margin:20px 0px 10px 0px;">
+					<input type="text" ng-model="search2" ng-change="change()" onclick="select()" class="form-control"  placeholder="Date" autofocus />
+					<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>	
+					<input type="text" ng-model="search" ng-change="change()" onclick="select()" class="form-control"  placeholder="Search" autofocus />
+					<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+				</div>
+				<div style="font-size: 11px; color:white;" layout="row" ng-cloak>	
+						<md-list layout-align="space-between">
+							<md-list-item  ng-repeat="item in newsData | orderBy:'created_at':reverse| filter:search |filter:search2 | startFrom:currentPage*pageSize|limitTo:pageSize">
+								<div  layout="column" flex="20" layout-align="left">
+									<p>{{item.date}}</p>
+								</div>
+								<div></div>
+								<div   layout="column" flex="80" layout-align="left">
+									<a style="color:white;" href="{{item.url}}" target="_blank">
+									<p>{{item.title}}</p>
+									</a>
+								</div>
+								<div></div>
+								<md-divider ng-if="!$last"></md-divider>								
+							</md-list-item>
+							<md-divider ></md-divider>
+							<md-divider ></md-divider>
+						</md-list>
+				</div>	
+				<div  layout="row" layout-align="center center" >
+					<md-button  ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1" style="color:white">
+							Previous
+					</md-button>
+							{{currentPage+1}}/{{numberOfPages()}}
+						<md-button  ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1" Style="color:white">
+								Next
+						</md-button>	
+				</div>
+						
+		</div>
+	</div>
+	<!-- End News2 mobile -->
+</div> 
+
