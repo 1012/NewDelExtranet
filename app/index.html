@@ -11,6 +11,27 @@
 		<meta name="format-detection" content="telephone=no"/>
 		<meta name="robots" content="index, follow"/>
 		
+		
+		<!-- build:css({.tmp,app}) css/main.css -->				
+		<link rel="stylesheet" href="https://gitcdn.xyz/repo/angular/bower-material/v0.11.0/angular-material.css">
+		<link rel="stylesheet" href="https://www.delmarcargo.com/css/bootstrap.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="https://www.delmarcargo.com/css/style.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="https://www.delmarcargo.com/css/elements.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css"/>
+		<link rel="stylesheet" src="https://normalize-css.googlecode.com/svn/trunk/normalize.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		
+    </head>
+	
+	
+    <body layout="column" ng-controller="AppCtrlDelmar" class="section-material-design md-accent qp-ui qp-ui-mask">
+		
+		<!--[if lt IE 10]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
 		<!--[if lt IE 9]>
 		<script src="docs-assets/js/ie8-responsive-file-warning.js"></script>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -25,49 +46,10 @@
 		<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 		<!--[if gt IE 8]><!--> 
 		<!--<![endif]-->
-				
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-aria.min.js"></script>
-		<script src="https://gitcdn.xyz/repo/angular/bower-material/v0.11.0/angular-material.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.3/ui-bootstrap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-resource.min.js"></script>
+	
 		
-
-		
-		
-		<link rel="stylesheet" href="https://gitcdn.xyz/repo/angular/bower-material/v0.11.0/angular-material.css">
-		<link rel="stylesheet" href="https://www.delmarcargo.com/css/bootstrap.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="https://www.delmarcargo.com/css/style.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="https://www.delmarcargo.com/css/elements.css" type="text/css" media="screen">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css"/>
-		<link rel="stylesheet" src="https://normalize-css.googlecode.com/svn/trunk/normalize.css" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="css/main.css">
-		
-        
-		<script src="js/DelmarcargoApp.js"></script>
-		<script src="js/DelmarControllers.js"></script>
-		<script src="js/MainSidenavService.js"></script>
-		<script src="js/MainToolsCtrl.js"></script>
-		<script src="js/ThemingProvider.js"></script>
-		<script src="js/stateprovider.js"></script> 
-		<script src="js/RunState.js"></script>
-		<script src="js/RightCtrlSidenav.js"></script> 
-		<script src="js/BottomSheetCtrl.js"></script>
-		<script src="js/TableCtrl.js"></script>
-		<script src="js/PolicyCtrl.js"></script>
-		<script src="js/newsFeedCtrl.js"></script>
-
-    </head>
-    <body layout="column" ng-controller="AppCtrlDelmar" class="section-material-design md-accent qp-ui qp-ui-mask">
 			<!-- First toolbar for computer screen size -->
-			<md-toolbar  class="md-accent" hide-md hide-sm ng-cloak>
+		<md-toolbar  class="md-accent" hide-md hide-sm ng-cloak>
 				<div layout="row" Style="color:#004685" layout-align="space-between" >
 					<div flex="60" hide-sm>
 					</div>
@@ -256,7 +238,7 @@
 						<h1  layout-align="left" class="md-toolbar-tools" fill-height layout-fill><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="240" height="55"></a></h1>
 					</div> 
 					<div flex="50">
-					<md-menu-bar  md-selected="selectedIndex" md-autoselect  hide-sm hide-md md-primary>
+					<md-menu-bar  md-selected="selectedIndex"   hide-sm hide-md md-primary>
 						<md-menu   ng-repeat="it in maintools"  label="{{it.name}}" ui-sref="{{it.name}}" ui-sref-active="active">			
 							<!-- <div style="font-size: 8px;"> -->
 								<md-button layout-align="center center" class="d-button-menu" md-border-bottom ng-click="selectMaintool(it)" ng-class="{'selected' : it === selected}">
@@ -349,5 +331,29 @@
 					</div>
 				<!-- End Footer -->
            </div>
+		   
+		<!-- Angular Material Dependencies --> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-aria.min.js"></script>
+		<script src="https://gitcdn.xyz/repo/angular/bower-material/v0.11.0/angular-material.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.3/ui-bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-resource.min.js"></script>
+		
+		<script src="js/DelmarcargoApp.js"></script>
+		<script src="js/DelmarControllers.js"></script>
+		<script src="js/MainSidenavService.js"></script>
+		<script src="js/MainToolsCtrl.js"></script>
+		<script src="js/ThemingProvider.js"></script>
+		<script src="js/stateprovider.js"></script> 
+		<script src="js/RunState.js"></script>
+		<script src="js/RightCtrlSidenav.js"></script> 
+		<script src="js/BottomSheetCtrl.js"></script>
+		<script src="js/TableCtrl.js"></script>
+		<script src="js/PolicyCtrl.js"></script>
+		<script src="js/newsFeedCtrl.js"></script>
     </body>
 </html>
