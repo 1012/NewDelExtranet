@@ -130,6 +130,15 @@ angular
 				};
 			});
 		}
+	/**
+	*Create filter function for a query stirng
+	*/
+	function createFilterFor(query){
+		var lowercaseQuery = angular.lowercase(query);
+		return function filterFn(language){
+			return (state.value.indexOf(lowercaseQuery) === 0);
+		};
+	}
 
 }])
 

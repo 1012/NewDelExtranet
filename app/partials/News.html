@@ -1,112 +1,73 @@
 <div>
 <!-- partials/News.html -->
-	<div layout="row" hide-sm hide-md>
-		<!-- computer screen size template left column-->
-		
-		<div layout="column" flex="20" hide-md hide-sm  class="d-note-background md-hue-1" md-whiteframe-z2 style=" padding-top:50px;">
-					<div>
-					<br>
-					<br>
-					<p style="color: #f3f7fa;">If you are unable to find a Policy or Procedure, or have any comments or questions please <a style="color: #ee3d42;">click here</a>.</p>
-					</div>
-					<div>
-					<br>
-					<br>
-					<p style="color: #f3f7fa;">Si vous êtes incapables de trouver la politique ou procédure que vous recherchez, ou vous avez des commentaires ou questions  <a style="color: #ee3d42;">cliquez ici</a>.</p>
-					</div>
-					<div>
-					<br>
-					<br>
-					<p style="color: #f3f7fa;">Si no encuentra la Politica o Proceso que busca; o si tiene algun comentario o pregunta por favor haga <a style="color: #ee3d42;">clic aqui</a>.</p>
-					</div>
-					<div>
-					<br>
-					<br>
-					<p style="color: #f3f7fa;">All new employees please <a style="color: #ee3d42;">click here</a> for first time orientation.</p>
-					</div>
+	
+		<div layout="row" flex  layout-margin  layout-align="center center"  class="d-news">
+			<h1>Delmar Today</h1>
 		</div>
-		<!-- end computer screen size template left column -->
 		<!-- icon menu -->
-		<div layout="column" flex-gt="80"   layout-margin layout-padding  style="width:900px; margin-left:100px;"  class="d-news">
-			<h1>News and Policy & Procedure</h1>
-			<hr>
-			<div layout="row" layout-sm="column" layout-align="space-around" layout-align="center center">
+		<md-divider></md-divider>
+		<div layout="row" layout-sm="column" layout-align="space-around" layout-align="center center" layout-padding layout-margin>
 			
 				<div layout="column" layout-align="center center">
-					<md-button class="md-fab md-accent aria-label"  layout-align="center center" ui-sref=".News2" ui-sref-active="active">
+					<md-button class="md-fab md-accent" aria-label="News" layout-align="center center" ui-sref=".News2" ui-sref-active="active">
 						<md-icon md-svg-icon="Icon/White/news12.svg"></md-icon>
 					</md-button>
 					<h3 class="md-title">News</h3>
 				</div>
 				<div layout="column" layout-align="center center">
-					<md-button  class="md-fab md-accent aria-label"  md-whiteframe-z1 ui-sref=".Policy" ui-sref-active="active">
+					<md-button  class="md-fab md-accent" aria-label="Policy"  md-whiteframe-z1 ui-sref=".Policy" ui-sref-active="active">
 						<md-icon md-svg-icon="Icon/White/lock74.svg"></md-icon>
 					</md-button>
 					<h3 class="md-title">Policy & Procedure</h3>
 				</div>
 				<div layout="column" layout-align="center center">
-					<md-button class="md-fab md-accent aria-label"  layout-align="center center" ui-sref=".Holidays" ui-sref-active="active">
-						<md-icon md-svg-icon="Icon/White/office-material33.svg"></md-icon>
-					</md-button>
-					<h3 class="md-title">Today's Holidays</h3>
-				</div>
-				<div layout="column" layout-align="center center">
-					<md-button class="md-fab md-accent aria-label"  layout-align="center center" ui-sref=".Carrer" ui-sref-active="active">
+					<md-button class="md-fab md-accent" aria-label="Carrer" layout-align="center center" ui-sref=".Carrer" ui-sref-active="active" >
 						<md-icon md-svg-icon="Icon/White/user53.svg"></md-icon>
 					</md-button>
-					<h3 class="md-title">Carrer</h3>
-				</div>
-			</div>
-				<!-- ui-view -->
-				<div layout="row"  layout-sm="column" layout-align="space-around" layout-align="center center" md-whiteframe-z1 style="text-align: center; font-size: 8px;">
-					<div ui-view ></div>
-				</div>
-				<!-- End ui-view -->
-		</div>
-	</div>
-	<!--End News computer -->
-	
-	<!-- News Tablet -->
-	<div layout="column" flex hide-sm hide-gt-md>
-		<div layout="column" flex layout-margin layout-padding  class="d-news" >
-			<div layout="row" layout-align="center center">
-				<h1>News and Policy & Procedure</h1>
-			</div>
-			<hr>
-			<div layout="row" layout-align="space-around" layout-align="center center">
-				<div layout="column" layout-align="center center">
-					<md-button class="md-fab md-accent aria-label"  layout-align="center center" ui-sref=".News2" ui-sref-active="active">
-						<md-icon md-svg-icon="Icon/White/news12.svg"></md-icon>
-					</md-button>
-					<h3 class="md-title">News</h3>
+					<h3 class="md-title">Carrers</h3>
 				</div>
 				<div layout="column" layout-align="center center">
-					<md-button  class="md-fab md-accent aria-label"  md-whiteframe-z1 ui-sref=".Policy" ui-sref-active="active">
-						<md-icon md-svg-icon="Icon/White/lock74.svg"></md-icon>
-					</md-button>
-					<h3 class="md-title">Policy & Procedure</h3>
-				</div>
-				<div layout="column" layout-align="center center">
-					<md-button class="md-fab md-accent aria-label"  layout-align="center center" ui-sref=".Holidays" ui-sref-active="active">
-						<md-icon md-svg-icon="Icon/White/office-material33.svg"></md-icon>
+					<md-button class="md-fab md-accent" aria-label="Holidays" layout-align="center center" ui-sref=".Holidays" ui-sref-active="active" style="color:white;">
+						<md-icon style="color:white;" md-svg-icon="Icon/White/0084-calendar.svg"></md-icon>
 					</md-button>
 					<h3 class="md-title">Today's Holidays</h3>
+				</div>				
+			</div>
+			 <div layout="row" layout-sm="column" layout-align="space-around" layout-align="center center" layout-padding layout-margin>
+				<div layout="column" layout-align="center center">
+					<md-button class="md-fab md-accent" aria-label="Carrer" layout-align="center center" ui-sref=".Carrer" ui-sref-active="active">
+						<md-icon md-svg-icon="Icon/White/yammer-logo.svg"></md-icon>
+					</md-button>
+					<h3 class="md-title">Yammer</h3>
+				</div>
+				<div layout="column" layout-align="center center" >
+					<md-button style="color:white;" class="md-fab md-accent" aria-label="Carrer" layout-align="center center" ui-sref=".Carrer" ui-sref-active="active">
+						<md-icon style="color:white;" md-svg-icon="Icon/White/0203-earth.svg"></md-icon>
+					</md-button>
+					<h3 class="md-title">Delmar Group</h3>
 				</div>
 				<div layout="column" layout-align="center center">
-					<md-button class="md-fab md-accent aria-label"  layout-align="center center" ui-sref=".Carrer" ui-sref-active="active">
-						<md-icon md-svg-icon="Icon/White/user53.svg"></md-icon>
+					<md-button class="md-fab md-accent" aria-label="Carrer" layout-align="center center" ui-sref=".Carrer" ui-sref-active="active">
+						<md-icon md-svg-icon="Icon/White/0389-mail2.svg"></md-icon>
 					</md-button>
-					<h3 class="md-title">Carrer</h3>
+					<h3 class="md-title">Delmar Webmail</h3>
+				</div> 
+				<div layout="column" layout-align="center center">
+					<md-button class="md-fab md-accent" aria-label="Carrer" layout-align="center center" ui-sref=".Carrer" ui-sref-active="active">
+						<md-icon md-svg-icon="Icon/White/0087-display.svg"></md-icon>
+					</md-button>
+					<h3 class="md-title">DelBi</h3>
 				</div>
-			</div>
-		</div>
-		
-		<!--Views -->
-			<div layout="row" layout-padding layout-margin  flex md-whiteframe-z2 style="text-align: center; font-size: 8px;">
+			</div> 
+			<!-- ui-view -->
+			<div layout="row"  layout-sm="column" layout-align="space-around" layout-align="center center" md-whiteframe-z1 style="text-align: center; font-size: 8px;">
 				<div ui-view ></div>
 			</div>
-			<!--End Views -->
-		<div layout="row" hide-gt-md hide-sm  layout-padding layout-margin class="d-note-background md-hue-1" layout-align="space-around" md-whiteframe-z1 layout-fill>
+				<!-- End ui-view -->
+
+	
+		<md-toolbar layout="row" flex class="md-primary md-hue-2">
+				<div layout="row"   layout-padding layout-margin class="d-note-policies" layout-align="space-around" md-whiteframe-z1 layout-fill>
 					<div layout="column" flex>
 					<p style="color: #f3f7fa;">If you are unable to find a Policy or Procedure, or have any comments or questions please <a style="color: #ee3d42;">click here</a>.</p>
 					</div>
@@ -120,58 +81,9 @@
 					<p></p>
 					<p style="color: #f3f7fa;">All new employees please <a style="color: #ee3d42;">click here</a> for first time orientation.</p>
 					</div>
-		</div>
-	</div>
-	<!-- End News Tablet -->
-	
-	<!-- News Mobile --> 
-		<div layout="column" hide-gt hide-md hide-gt-md>
-	
-			<div layout="column" layout-align="space-around" >
-				<div layout="column" layout-align="center center">
-					<md-button class="md-fab md-accent aria-label"  layout-align="center center" ui-sref=".News2" ui-sref-active="active">
-						<md-icon md-svg-icon="Icon/White/news12.svg"></md-icon>
-					</md-button>
-					<h3 class="md-title">News</h3>
 				</div>
-				<div layout="column" layout-align="center center">
-					<md-button  class="md-fab md-accent aria-label"  md-whiteframe-z1 ui-sref=".Policy" ui-sref-active="active">
-						<md-icon md-svg-icon="Icon/White/lock74.svg"></md-icon>
-					</md-button>
-					<h3 class="md-title">Policy & Procedure</h3>
-				</div>
-				<div layout="column" layout-align="center center">
-					<md-button class="md-fab md-accent aria-label"  layout-align="center center" ui-sref=".Holidays" ui-sref-active="active">
-						<md-icon md-svg-icon="Icon/White/office-material33.svg"></md-icon>
-					</md-button>
-					<h3 class="md-title">Today's Holidays</h3>
-				</div>
-				<div layout="column" layout-align="center center">
-					<md-button class="md-fab md-accent aria-label"  layout-align="center center" ui-sref=".Carrer" ui-sref-active="active">
-						<md-icon md-svg-icon="Icon/White/user53.svg"></md-icon>
-					</md-button>
-					<h3 class="md-title">Carrer</h3>
-				</div>
-			</div>
-			<!-- end mobile icon menu -->
-			<!-- ui-view for mobile -->
-			<div layout="row"  layout-sm="column" layout-align="space-around" layout-align="center center" md-whiteframe-z1 style="text-align: center; font-size: 8px;">
-						<div ui-view ></div>
-			</div>
-			<!-- end ui-view for mobile -->
+		</md-toolbar>
 		
-		<div layout="row" hide-gt-md hide-md  layout-padding  layout-margin class="d-note-background md-hue-1" layout-align="space-around" md-whiteframe-z1>
-					<div layout="column" flex>
-						<p style="color: #f3f7fa;">If you are unable to find a Policy or Procedure, or have any comments or questions please <a style="color: #ee3d42;">click here</a>.</p>
-						<p></p>
-						<p style="color: #f3f7fa;">Si vous êtes incapables de trouver la politique ou procédure que vous recherchez, ou vous avez des commentaires ou questions  <a style="color: #ee3d42;">cliquez ici</a>.</p>
-					</div>
-					<div layout="column" flex>
-						<p style="color: #f3f7fa;">Si no encuentra la Politica o Proceso que busca; o si tiene algun comentario o pregunta por favor haga <a style="color: #ee3d42;">clic aqui</a>.</p>
-						<p></p>
-						<p style="color: #f3f7fa;">All new employees please <a style="color: #ee3d42;">click here</a> for first time orientation.</p>
-					</div>
-		</div>
-	</div>
-
+	
+	
 </div>
