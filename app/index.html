@@ -34,6 +34,9 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.3/ui-bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-resource.min.js"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="https://c64.assets-yammer.com/assets/platform_embed.js"></script>
+		
 		
 		<script src="js/DelmarcargoApp.js"></script>
 		<script src="js/DelmarControllers.js"></script>
@@ -43,6 +46,8 @@
 		<script src="js/stateprovider.js"></script> 
 		<script src="js/RunState.js"></script>
 		<script src="js/RightCtrlSidenav.js"></script> 
+		<script src="js/googleLoad.js"></script>
+		<script src="js/googleFeedsNews.js"></script>
 		<script src="js/BottomSheetCtrl.js"></script>
 		<script src="js/TableCtrl.js"></script>
 		<script src="js/PolicyCtrl.js"></script>
@@ -72,39 +77,42 @@
 		<!--<![endif]-->
 	
 		
-			<!-- Computer screen size -->
-		<div layout="column">
+		<!-- main menu -->
+		<div layout="column" >
 			<md-toolbar layout="row" flex layout-align="center center" class="md-hue-1 md-tall md-whiteframe-z1">
-				<div flex="10" hide-gt-md show-md class=""ng-controller="MainToolsCtrl" style="font-size:13px; padding:0px 0px 48px 15px;">
+				<div flex hide-gt-md show-md ng-controller="MainToolsCtrl" style="font-size:13px; padding:0px 12px 55px 0px;">
 					<md-button ng-click="toggleSidenav('left')" hide-gt-md class="md-fab md-accent d-avatar">
 						<md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
 					</md-button>
 					<span hide-sm style="font-size:13px; padding:50px 0px 0px 15px;">Menu</span>
 				</div>
-				
-					<div layout="column" flex="20"></div>
-					<div flex layout="column" layout-align="center center">
-						<div layout="row">
-							<h1   class="md-toolbar-tools"><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="235" height="50"></a></h1>
-						</div>
-						<div layout="row" hide-md  hide-sm ng-controller="MainToolsCtrl" layout-align="center center" style="padding-bottom: 10px;">
-							<md-menu-bar  layout-align="center center" md-selected="selectedIndex">
-								<md-menu   ng-repeat="it in maintools"  label="{{it.name}}" ui-sref="{{it.name}}" ui-sref-active="active">			
-									<md-button layout-align="center center" class="d-button-menu" md-border-bottom ng-click="selectMaintool(it)" ng-class="{'selected' : it === selected}">
+				<div layout="column" flex="20" hide-sm hide-md>
+					<div layout="row" layout-align="center center">
+						<h1   class="md-toolbar-tools"><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="230" height="50"></a></h1>
+					</div>
+				</div>
+				<div flex="60" flex-sm="65" flex-md="80" layout="column" layout-align="center center">
+						<div hide-gt-md layout="row" layout-align="center center">
+							<h1   class="md-toolbar-tools"><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="205" height="45"></a></h1>
+						</div> 
+						<div layout="row" hide-md  hide-sm ng-controller="MainToolsCtrl" layout-align="center center"  style="padding-bottom: 10px;">
+							<md-menu-bar  layout-align="space-between center" md-selected="selectedIndex">
+								<md-menu  layout-align="space-between"  ng-repeat="it in maintools"  label="{{it.name}}" ui-sref="{{it.name}}" ui-sref-active="active">			
+									<md-button layout-align="space-between center"  class="d-button-menu" md-border-bottom ng-click="selectMaintool(it)" ng-class="{'selected' : it === selected}">
 										{{it.name}}
 										<img src="Icon/down.png" width="13" height="13">
 									</md-button>
 								</md-menu>
 							</md-menu-bar>
 						</div>
-					</div>
-					<div flex="25" layout="column" class="md-menu-demo" layout-align="center end" >
+				</div>
+				<div flex="20" layout="column" class="md-menu-demo" layout-align="center left">
 						<div layout="row" hide-md  hide-sm class="menu-demo-container">
+							<div flex="30" layout="row">
 							<md-menu-bar>
 								<md-menu md-position-mode="target-right target" md-offset="0 50">
 									<button class="d-button-menu md-accent" ng-click="$mdOpenMenu()">
-										Language
-										<img src="Icon/down.png" width="13" height="13">
+										Language <img src="Icon/down.png" width="10" height="10">
 									</button>
 									<md-menu-content width="2">
 										<md-menu-item>
@@ -135,10 +143,15 @@
 									</md-menu-content>
 								</md-menu>
 							</md-menu-bar>
-							<input type="text" ng-model="search2" ng-change="change()" onclick="select()" class="form-control"  placeholder="Search"  />
+							</div>
+							<div layout="row" flex="70">
+							<input type="text" ng-model="search2" ng-change="change()" onclick="select()" class="form-control d-search-placeholder"  placeholder="Search"  />
 							<span hide-md class="input-group-addon d-search"><i class="glyphicon glyphicon-search" style="color:white;"></i></span>	
+							</div>
 						</div>
-						<div class="row"  layout-align="right" style="margin: 0px 0px 0px 100px;">
+						<div layout="row" layout-align-sm="left" style="margin: 0px 0px 0px 0px;">
+							<div flex="30" hide-sm></div>
+							<div flex="70">
 							<a class="d-button-menu" href="" target="_blank">
 								<md-button  class="md-fab md-accent d-avatar" aria-label="user">
 									<md-icon md-svg-icon="Icon/White/user73.svg"></md-icon>
@@ -148,23 +161,19 @@
 									<span hide-sm>Sign out</span>
 								</md-button>
 							</a>
+							</div>
 						</div>
-					</div>					
+				</div>					
 				
 			</md-toolbar>
-			<div style="height:500px;" hide-sm class="d-extranet-background">
-				<div layout-align="center center" class="d-extranet-background-slogan" style="height:325px; padding-top:550px; " >
-				</div>
-			</div>
-		
 			<div  hide-gt style="font-color: white" hide-gt-md layout="column" flex class="content-wrapper md-accent md-hue-3" ng-controller="MainToolsCtrl">
 				<md-sidenav   layout="column" class=" md-whiteframe-z1 md-hue-1 md-accent" md-component-id="left" >
 					<md-list class="md-accent md-hue-2" layout-align="center center" >
 						<md-list-item layout-align="center center">
 						<md-button style="color:black;" layout-align="center center" ng-click="close()" class="md-warning" hide-gt-md>
 						Close
-						</md-list-item>
 						</md-button>
+						</md-list-item>
 						<md-divider></md-divider>
 						<md-list-item layout-align="center center" ng-repeat="it in maintools">
 							<md-item-content>
@@ -175,31 +184,19 @@
 								<md-divider ng-if="!$last"></md-divider>
 							</md-item-content>
 						</md-list-item>
-							<md-divider ></md-divider>
+							<md-divider></md-divider>
 							<md-divider ></md-divider>
 					</md-list>
-					
 				</md-sidenav>
 			</div>
-				<div layout="row" flex >
-					<div style="padding: 25px; padding-top: 100px; text-align: center; font-size: 8px;">
-						<md-content  layout="row"  flex class="md-padding" selected="{{selected.name}}">
-							<div ui-view ></div>
-						</md-content>
-					</div>
+			<!-- End main menu -->
+			<!-- partials views -->
+			<div layout="row" flex layout-align="center center">
+				<div layout="column"  selected="{{selected.name}}" style=" text-align: center; font-size: 8px; ">
+						<div ui-view ></div>
 				</div>
-					
-				<!-- Footer -->
-				<div class="d_section" >
-					<md-toolbar layout="row" class="md-primary md-hue-2">
-						<div class="row" class="md-toolbar-tools" layout-align-gt-sm="center" fill-height layout-align="center center" layout-fill>
-							<div class="footer-copyright">
-								<p> © 2015 Delmar International Inc. All rights reserved. | <a href="legal.html" target="_blank" style="color: #003399;">Legal</a>  </p>
-							</div>
-						</div>
-					</md-toolbar>
-				</div>
-				<!-- End Footer -->
+			</div>
+			<!--End partials views -->
         </div>
 	
     </body>
