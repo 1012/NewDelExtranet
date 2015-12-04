@@ -13,7 +13,7 @@
 		
 		
 		<!-- build:css({.tmp,app}) css/main.css -->				
-		<link rel="stylesheet" href="https://gitcdn.xyz/repo/angular/bower-material/v0.11.0/angular-material.css">
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
 		<link rel="stylesheet" href="https://www.delmarcargo.com/css/bootstrap.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="https://www.delmarcargo.com/css/style.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="https://www.delmarcargo.com/css/elements.css" type="text/css" media="screen">
@@ -29,7 +29,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-aria.min.js"></script>
-		<script src="https://gitcdn.xyz/repo/angular/bower-material/v0.11.0/angular-material.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.3/ui-bootstrap.min.js"></script>
@@ -46,7 +46,7 @@
 		<script src="js/stateprovider.js"></script> 
 		<script src="js/RunState.js"></script>
 		<script src="js/RightCtrlSidenav.js"></script> 
-		<script src="js/googleLoad.js"></script>
+		<!-- <script src="js/googleLoad.js"></script> -->
 		<script src="js/googleFeedsNews.js"></script>
 		<script src="js/BottomSheetCtrl.js"></script>
 		<script src="js/TableCtrl.js"></script>
@@ -78,9 +78,9 @@
 	
 		
 		<!-- main menu -->
-		<div layout="column" >
+		<div>
 			<md-toolbar layout="row" flex layout-align="center center" class="md-hue-1 md-tall md-whiteframe-z1">
-				<div flex hide-gt-md show-md ng-controller="MainToolsCtrl" style="font-size:13px; padding:0px 12px 55px 0px;">
+				<div layout="column" flex-sm="20" hide-gt-md  ng-controller="MainToolsCtrl" style="font-size:13px; padding:0px 12px 55px 0px;">
 					<md-button ng-click="toggleSidenav('left')" hide-gt-md class="md-fab md-accent d-avatar">
 						<md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
 					</md-button>
@@ -91,7 +91,7 @@
 						<h1   class="md-toolbar-tools"><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="230" height="50"></a></h1>
 					</div>
 				</div>
-				<div flex="60" flex-sm="65" flex-md="80" layout="column" layout-align="center center">
+				<div layout="column" flex="60" flex-sm="60" flex-md="80"  layout-align="center center">
 						<div hide-gt-md layout="row" layout-align="center center">
 							<h1   class="md-toolbar-tools"><a href="index.html"><img src="https://www.delmarcargo.com/img/delmarcargo_logo_2x.png" alt="" width="205" height="45"></a></h1>
 						</div> 
@@ -106,9 +106,9 @@
 							</md-menu-bar>
 						</div>
 				</div>
-				<div flex="20" layout="column" class="md-menu-demo" layout-align="center left">
+				<div flex="20" layout="column"  flex-sm="20"  class="md-menu-demo" layout-align="center left">
 						<div layout="row" hide-md  hide-sm class="menu-demo-container">
-							<div flex="30" layout="row">
+							<div  flex="40" layout="row">
 							<md-menu-bar>
 								<md-menu md-position-mode="target-right target" md-offset="0 50">
 									<button class="d-button-menu md-accent" ng-click="$mdOpenMenu()">
@@ -144,14 +144,27 @@
 								</md-menu>
 							</md-menu-bar>
 							</div>
-							<div layout="row" flex="70">
-							<input type="text" ng-model="search2" ng-change="change()" onclick="select()" class="form-control d-search-placeholder"  placeholder="Search"  />
-							<span hide-md class="input-group-addon d-search"><i class="glyphicon glyphicon-search" style="color:white;"></i></span>	
+							<div layout="row" flex="60" >
+							<!-- <input type="text" ng-model="search2" ng-change="change()" onclick="select()" class="form-control d-search-placeholder"  placeholder="Search"  /> <span hide-md class="input-group-addon d-search"><i class="glyphicon glyphicon-search" style="color:white;"></i></span>-->
+							
+							<script>
+  								(function() {	
+    							var cx = '001699383099386126373:cqje7my2cie';
+    							var gcse = document.createElement('script');
+    							gcse.type = 'text/javascript';
+    							gcse.async = true;
+    							gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        						'//cse.google.com/cse.js?cx=' + cx;
+    							var s = document.getElementsByTagName('script')[0];
+    							s.parentNode.insertBefore(gcse, s);
+  								})();
+							</script>
+							<gcse:search></gcse:search>
 							</div>
 						</div>
 						<div layout="row" layout-align-sm="left" style="margin: 0px 0px 0px 0px;">
 							<div flex="30" hide-sm></div>
-							<div flex="70">
+							<div flex="70" >
 							<a class="d-button-menu" href="" target="_blank">
 								<md-button  class="md-fab md-accent d-avatar" aria-label="user">
 									<md-icon md-svg-icon="Icon/White/user73.svg"></md-icon>
@@ -166,9 +179,9 @@
 				</div>					
 				
 			</md-toolbar>
-			<div  hide-gt style="font-color: white" hide-gt-md layout="column" flex class="content-wrapper md-accent md-hue-3" ng-controller="MainToolsCtrl">
-				<md-sidenav   layout="column" class=" md-whiteframe-z1 md-hue-1 md-accent" md-component-id="left" >
-					<md-list class="md-accent md-hue-2" layout-align="center center" >
+			<div  hide-gt style="font-color: white" hide-gt-md layout="column" flex class="content-wrapper md-hue-1" ng-controller="MainToolsCtrl">
+				<md-sidenav   layout="column" class=" md-whiteframe-z1" md-component-id="left" >
+					<md-list class="" layout-align="center center" >
 						<md-list-item layout-align="center center">
 						<md-button style="color:black;" layout-align="center center" ng-click="close()" class="md-warning" hide-gt-md>
 						Close
@@ -191,9 +204,9 @@
 			</div>
 			<!-- End main menu -->
 			<!-- partials views -->
-			<div layout="row" flex layout-align="center center">
-				<div layout="column"  selected="{{selected.name}}" style=" text-align: center; font-size: 8px; ">
-						<div ui-view ></div>
+			<div layout="row" flex="auto" layout-align="center center">
+				<div  selected="{{selected.name}}" style=" text-align: center; font-size: 8px; ">
+						<div layout="column" flex="auto" ui-view ></div>
 				</div>
 			</div>
 			<!--End partials views -->

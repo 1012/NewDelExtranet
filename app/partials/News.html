@@ -1,99 +1,118 @@
-<!-- <div layout="column" flex> -->
+
+<div layout="column" flex>
+<md-content>
 <!-- partials/News.html -->
-	<div style="height:500px;"  class="d-extranet-background">
-				<div layout-align="center center" layout-wrap class="d-extranet-background-slogan" style="height:325px;" >
-				</div>
+	<div flex flex-order="1"  layout-padding style="height:450px;"  class="d-extranet-background">
+				<!-- <div layout-align="center center" class="d-extranet-background-slogan" style="height:255px;" >
+				</div> -->
 	</div>
-	<div layout="row" flex    layout-align="center center" layout-padding class="d-icons-menu" style="margin-top:30px;">
+	<div layout="row" flex flex-order="2"   layout-align="center center" layout-padding class="d-icons-menu" style="margin-top:30px;">
 		<h1>Delmar Today</h1>
 	</div>
 	<!-- icon menu -->
 	<md-divider></md-divider>
-	<div layout="row" layout-sm="column" layout-md="column"  flex layout-align="center center" layout-padding class="d-icons-menu" md-whiteframe-z2>
+	<div layout="row" layout-sm="column" layout-md="column"  flex flex-order="3" layout-align="center center" layout-padding md-dynamic-height class="d-icons-menu" ng-cloak>
+		
 		<div layout-gt-lg="row" layout-md="row" layout-gt-md="row" layout-align="space-between" layout-margin>
-		<div layout="column" layout-align="center center">
-			<md-button class="md-fab md-accent d-icon" aria-label="News" layout-align="center center" ui-sref=".News2" ui-sref-active="active">
-				<md-icon class="d-icon" md-svg-icon="Icon/White/news12.svg"></md-icon>
-			</md-button>
-			<h3 class="md-title">All News</h3>
-		</div>
-		<div layout="column" layout-align="center center">
-			<md-button  class="md-fab md-accent d-icon" aria-label="Policy"  md-whiteframe-z1 ui-sref=".Policy" ui-sref-active="active">
-				<md-icon class="d-icon" md-svg-icon="Icon/White/lock74.svg"></md-icon>
-			</md-button>
-			<h3 class="md-title">Policy & Procedure</h3>
-		</div>
-		<div layout="column" layout-align="center center">
-			<md-button class="md-fab md-accent d-icon" aria-label="Carrer" layout-align="center center" ui-sref=".Carrer" ui-sref-active="active" >
-				<md-icon class="d-icon" md-svg-icon="Icon/White/user53.svg"></md-icon>
-			</md-button>
-			<h3 class="md-title">Carrers</h3>
-		</div>
-		<div layout="column" layout-align="center center">
-			<md-button class="md-fab md-accent d-icon" aria-label="Holidays" layout-align="center center" ui-sref=".Holidays" ui-sref-active="active" style="color:white;">
-				<md-icon class="d-icon" style="color:white;" md-svg-icon="Icon/White/0084-calendar.svg"></md-icon>
-			</md-button>
-			<h3 class="md-title">Today's Holidays</h3>
-		</div>
-		</div>
-		<div layout-gt-lg="row" layout-md="row" layout-gt-md="row" layout-align="space-between"  layout-margin layout-align="center center">
-		<div layout="column" layout-align="center center">
-			<md-button class="md-fab md-accent d-icon d-special" aria-label="Carrer" layout-align="center center" ui-sref=".Carrer" ui-sref-active="active">
-				<md-icon class="d-icon d-special" md-svg-icon="Icon/White/yammer-logo.svg"></md-icon>
-			</md-button>
-			<h3 class="md-title">Yammer</h3>
-		</div>
-		<div layout="column" layout-align="center center" >
-			<md-button style="color:white;" class="md-fab md-accent d-icon" aria-label="Carrer" layout-align="center center" ui-sref=".Carrer" ui-sref-active="active">
-				<md-icon class="d-icon" style="color:white;" md-svg-icon="Icon/White/0203-earth.svg"></md-icon>
-			</md-button>
-			<h3 class="md-title">Delmar Group</h3>
-		</div>
-		<div layout="column" layout-align="center center">
-			<md-button class="md-fab md-accent d-icon" aria-label="Carrer" layout-align="center center" ui-sref=".Carrer" ui-sref-active="active">
-				<md-icon class="d-icon" md-svg-icon="Icon/White/0389-mail2.svg"></md-icon>
-			</md-button>
-			<h3 class="md-title" >Delmar Webmail</h3>
-		</div> 
-		<div layout="column" layout-align="center center">
-			<md-button class="md-fab md-accent d-icon" aria-label="Carrer" layout-align="center center" ui-sref=".Carrer" ui-sref-active="active">
-				<md-icon class="d-icon" md-svg-icon="Icon/White/0087-display.svg"></md-icon>
-			</md-button>
-			<h3 class="md-title">DelBi</h3>
-		</div>
-		</div>
-	</div>
-	<md-divider></md-divider>
-				
-	<div layout="row"  layout-sm="column" layout-padding layout-align="space-around"  md-whiteframe-z1 layout-align="center center" style="text-align: left; font-size: 8px; color: black; padding-left:50px;">
-		<div layout="column" flex="33" flex-sm="80" layout-padding style=" padding:0px 35px 0px 35px;" class="d-icons-menu" md-whiteframe-z2 layout-margin>
-			<h2 style="text-align:center"> Latest News </h2>
-			<md-divider></md-divider>
-			<br>
-			<div layout-align="left center" id="feed" class="md-accent" style="color:black; padding: 30px;0px;0px;0px;">
+			<div layout="column" layout-margin layout-align="center center">
+				<md-button  class="md-fab md-accent d-icon" aria-label="News" layout-align="center center" ui-sref=".News2" ui-sref-active="active">
+					<md-icon class="d-icon" md-svg-icon="Icon/White/news12.svg"></md-icon>
+				</md-button>
+				<h3 class="md-subhead">All News</h3>
+			</div>
+			<div layout="column" layout-margin layout-align="center center">
+				<md-button  class="md-fab md-accent d-icon" aria-label="Policy"  md-whiteframe-z1 ui-sref=".Policy" ui-sref-active="active">
+					<md-icon class="d-icon" md-svg-icon="Icon/White/lock74.svg"></md-icon>
+				</md-button>
+				<h3 class="md-subhead">Policy & Procedure</h3>
+			</div>
+			<div layout="column" layout-margin layout-align="center center">
+				<md-button class="md-fab md-accent d-icon" aria-label="Carrer" layout-align="center center" ui-sref=".Carrer" ui-sref-active="active" >
+					<md-icon class="d-icon" md-svg-icon="Icon/White/user53.svg"></md-icon>
+				</md-button>
+				<h3 class="md-subhead">Carrers</h3>
+			</div>
+			<div layout="column" layout-margin layout-align="center center">
+				<md-button class="md-fab md-accent d-icon" aria-label="Holidays" layout-align="center center" ui-sref=".Holidays" ui-sref-active="active" style="color:white;">
+					<md-icon class="d-icon" style="color:white;" md-svg-icon="Icon/White/0084-calendar.svg"></md-icon>
+				</md-button>
+				<h3 class="md-subhead">Today's Holidays</h3>
 			</div>
 		</div>
-		<div  layout="column" flex="33" flex-sm="80" layout-padding class="d-icons-menu" md-whiteframe-z2 layout-margin>
-			<h2 style="text-align:center"> Yammer All Company </h2>
+		<div layout-gt-lg="row" layout-margin layout-md="row" layout-gt-md="row" layout-align="space-between"  layout-margin layout-align="center center">
+			<div layout="column" layout-align="center center">
+				<md-button class="md-fab md-accent d-icon d-special" aria-label="Carrer" layout-align="center center" ui-sref=".Yammer" ui-sref-active="active">
+					<md-icon class="d-icon d-special" md-svg-icon="Icon/White/yammer-logo.svg"></md-icon>
+				</md-button>
+				<h3 class="md-subhead">Yammer</h3>
+			</div>
+			<div layout="column" layout-margin layout-align="center center" >
+				<md-button style="color:white;" class="md-fab md-accent d-icon" aria-label="Carrer" layout-align="center center" ui-sref=".Group" ui-sref-active="active">
+					<md-icon class="d-icon" style="color:white;" md-svg-icon="Icon/White/0203-earth.svg"></md-icon>
+				</md-button>
+				<h3 class="md-subhead">Delmar Group</h3>
+			</div>
+			<div layout="column" layout-margin layout-align="center center">
+				<md-button class="md-fab md-accent d-icon" aria-label="Carrer" layout-align="center center" ui-sref=".Webmail" ui-sref-active="active">
+					<md-icon class="d-icon" md-svg-icon="Icon/White/0389-mail2.svg"></md-icon>
+				</md-button>
+				<h3 class="md-subhead" >Delmar Webmail</h3>
+			</div> 
+			<div layout="column" layout-margin layout-align="center center">
+				<md-button class="md-fab md-accent d-icon" aria-label="Carrer" layout-align="center center" ui-sref=".Delbi" ui-sref-active="active">
+					<md-icon class="d-icon" md-svg-icon="Icon/White/0087-display.svg"></md-icon>
+				</md-button>
+				<h3 class="md-subhead">DelBi</h3>
+			</div>
+		</div>
+		
+	</div>
+	<md-divider></md-divider>
+		
+		
+	<div layout="row"  flex layout-sm="column" layout-padding layout-align="space-around"  layout-align="center center" style="text-align: left; height: 650px; font-size: 8px; color: black; padding-left:50px;" flex-order="4" >
+		<div flex="5"></div>
+		<div flex="90">
+		<md-content layout="row"  layout-sm="column" style="height:675px;">
+		<div layout="column" flex="33"  flex-sm="80"  style=" padding:0px 35px 0px 35px; height:500" class="d-icons-menu"  layout-margin>
+			<h2 style="text-align:center" class="md-headline"> <img style="color:black;" src="Icon/White/news2.png" width="24" height="24"> Latest News </h2>
 			<md-divider></md-divider>
-				<div id="embedded-feed" layout-align="right center" class="md-accent" style="color:black; height:600px;width:500px; padding: 30px;0px;0px;0px;">
-				</div>
+			<br>
+			<!-- <md-content style="color:black; margin: 40px;0px;0px;0px;"> -->
+			<div layout-align="left center" id="feed" class="md-accent" style="color:black; ">
+			</div>
+			<!-- </md-content> -->
+		</div>
+		<md-divider></md-divider>
+		<div  layout="column" flex="33" flex-sm="80"  layout-padding class="d-icons-menu"  layout-margin >
+			<h2 style="text-align:center" class="md-headline"> <img style="color:black;" src="Icon/White/yammer.png" width="24" height="24"> All Company </h2>
+			<md-divider></md-divider>
+			<div  flex id="embedded-feed" layout-align="right center" class="md-accent" style="color:black; height:500px; width:500px; padding: 30px;0px;0px;0px;">
+			</div>
 			<script>
 			yam.connect.embedFeed(
 				{ container: '#embedded-feed',
 					network: 'delmarcargo.com'  // network permalink (see below)
 				});
 			</script>
+			<md-divider></md-divider>
 		</div>
-		<div  layout="column" flex="33" flex-sm="80" layout-padding>
+		<md-divider></md-divider>
+		<div  layout="column" flex="33"  flex-sm="100" layout-padding class="d-icons-menu"  layout-margin>
+			<h2 style="text-align:center" class="md-headline"> <img style="color:black;" src="Icon/White/0084-calendar2.png" width="24" height="24"> Today's Holidays </h2>
+			<md-divider></md-divider>
 		</div>
+		</md-content>
+		</div>
+		<div flex="5"></div>
 	</div>
+	
 	<!-- ui-view -->
-	<div layout="row"  layout-sm="column" layout-align="space-around" layout-align="center center" md-whiteframe-z1 style="text-align: center; font-size: 8px;">
+	<div layout="row"  flex-order="5" layout-sm="column" layout-align="space-around" layout-align="center center" md-whiteframe-z1 style="text-align: center; font-size: 8px;">
 		<div ui-view ></div>
 	</div>
 	<!-- End ui-view -->
-	<md-toolbar layout="row" flex    class="md-primary md-hue-2" style="background-color:#6a6a6a ">
+	<md-toolbar layout="row" flex   flex-order="6" class="md-primary md-hue-2" style="background-color:#6a6a6a margin-top:100px;">
 				<div layout="row"   layout-padding layout-margin class="d-note-policies" layout-align="space-around" md-whiteframe-z1 layout-fill>
 					<div layout="column" flex>
 					<p style="color: #f3f7fa;">If you are unable to find a Policy or Procedure, or have any comments or questions please <a style="color: #01ffff;">click here</a>.</p>
@@ -111,8 +130,8 @@
 				</div>
 	</md-toolbar>
 	<!-- Footer -->
-	<div class="d_section" >
-		<md-toolbar layout="row" class="md-primary md-hue-2">
+	<div layout="row" flex-order="7" >
+		<md-toolbar layout="row"  class="md-primary md-hue-2">
 			<div class="row" class="md-toolbar-tools" layout-align-gt-sm="center" fill-height layout-align="center center" layout-fill>
 				<div class="footer-copyright">
 					<p> © 2015 Delmar International Inc. All rights reserved. | <a href="legal.html" target="_blank" style="color: #003399;">Legal</a>  </p>
@@ -121,5 +140,5 @@
 		</md-toolbar>
 	</div>
 	<!-- End Footer -->
-	
-<!-- </div> -->
+</md-content>	
+</div>

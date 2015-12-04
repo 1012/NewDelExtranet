@@ -3,8 +3,9 @@
 
 google.load("feeds", "1");
     function initialize() {
-	 var feed = new google.feeds.Feed("http://blog.delmarcargo.com/category/English/feed/");
-		 feed.setNumEntries(3);
+	 //var feed = new google.feeds.Feed("http://blog.delmarcargo.com/category/English/feed/");
+	 var feed = new google.feeds.Feed("http://www.delmarcargo.com/apps/mobile/news");
+		 feed.setNumEntries(2);
       feed.load(function(result) {
         if (!result.error) {
           var container = document.getElementById("feed");
@@ -32,6 +33,6 @@ google.load("feeds", "1");
       });
     }
     google.setOnLoadCallback(initialize);
-	google.setOnLoadCallback(OnLoad);
-	google.setOnLoadCallback(handler);
+	 google.setOnLoadCallback(OnLoad);
+	 google.setOnLoadCallback(handler);
 	

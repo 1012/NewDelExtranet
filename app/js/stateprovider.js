@@ -52,6 +52,26 @@ angular
 			url: '/Carrer',
 			templateUrl: 'partials/News/Carrer.html'
 		})
+		.state('News.Yammer',{
+			// ui-view inside News.html.
+			url: '/Yammer',
+			templateUrl: 'partials/News/Yammer.html'
+		})
+		.state('News.Group',{
+			// ui-view inside News.html.
+			url: '/Group',
+			templateUrl: 'partials/News/Group.html'
+		})
+		.state('News.Webmail',{
+			// ui-view inside News.html.
+			url: '/Webmail',
+			templateUrl: 'partials/News/Webmail.html'
+		})
+		.state('News.Delbi',{
+			// ui-view inside News.html.
+			url: '/Delbi',
+			templateUrl: 'partials/News/Delbi.html'
+		})
 	.state('Admin', {
 		// Use a url of "/" to set a state as the "index".
       url: '/partials/Admin',
