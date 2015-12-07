@@ -1,0 +1,246 @@
+		.d-successful-login-background .d_top {
+				background: #DEDEDE url("https://www.delmarcargo.com/img/backg.jpg") no-repeat center center;
+				background-size: cover;
+				}
+			.d-extranet-background {
+				background: #DEDEDE url("https://www.delmarcargo.com/DelmarExtranetNew/NewDelExtranet/Img/delmar-test.jpg")no-repeat center center;
+				background-size: cover;
+				/*background-position-y: -800px;*/
+				}
+			.d-extranet-background-slogan {
+				background: transparent  url("https://www.delmarcargo.com/DelmarExtranetNew/NewDelExtranet/Img/Image-text.png")no-repeat center center;
+				background-size: width="501" height="223";
+				
+				}
+				
+				
+			/* .menu-demo-container{
+				width: 50px;
+				} */
+			h3 {
+				font-size: 20px;
+				text-transform: uppercase;
+				margin-bottom: 22px;
+				color: #428bca;
+				cursor: auto;
+				}
+			h3>h4 {
+				font-size: 14px;
+				color: #000000;
+				margin-bottom: 18px;
+				text-transform: none;
+				font-family: 'Arial', sans-serif;
+				font-weight: 300;
+				line-height: 1.6em;
+				}
+				h4>h3 {
+				font-size: 14px;
+				color: #000000;
+				margin-bottom: 18px;
+				text-transform: none;
+				font-family: 'Arial', sans-serif;
+				font-weight: 300;
+				line-height: 1.6em;
+				}
+				h3>h4>h5>h6>p {
+				font-size: 13px;
+				color: #000000;
+				margin-bottom: 22px;
+				text-transform: none;
+				font-family: 'Arial', sans-serif;
+				font-weight: 350;
+				text-transform: lowercase;
+				line-height: 1.6em;
+				}
+				h4>h3>h5>h6>p {
+				font-size: 13px;
+				color: #000000 !important;
+				margin-bottom: 22px;
+				text-transform: none;
+				font-family: 'Arial', sans-serif;
+				font-weight: 350;
+				text-transform: lowercase;
+				line-height: 1.6em;
+				}
+			.d-button-menu{
+				padding:0 2px 0 2px;
+				/* margin:12px 0px 3px 2px; */
+				min-width:55px;
+				text-transform:none;
+				/* bottom:5px; */
+				/* left:5px; */
+				font-size:12px;
+				}
+			.d-note-background{
+				padding: 60px 15px 10px 20px;
+				margin:0px 2px 20px 2px;
+				background: #004685;
+				text-align:left;
+				/* bottom:5px; */
+				left:5px;
+				font-size:13px;
+				text-color:#ffffff;
+				
+				}
+				.d-note-policies{
+				background: #6a6a6a;
+				text-align:left;
+				bottom:5px;
+				left:5px;
+				font-size:12px;
+				text-color:#ffffff;
+				
+				}
+				.d-icons-menu{
+				background: #f3f7fa;
+				}
+				/* .d-note-background .d-shadow{
+				padding: 0px 15px 10px 20px;
+				margin:0px 2px 30px 2px;
+				background: grey;
+				opacity: 0.4;
+				text-align:left;
+				bottom:5px;
+				left:5px;
+				font-size:13px;
+				text-color:#ffffff;
+				border-radius: 6px;
+				max-height: 200px;
+				} */
+			.d-calendar-background{
+				padding: 5px 0px 0 0px;
+				margin:30px 0px 0px 0px;
+				background: #4b4b4b;				
+				font-size:13px;
+				max-width: 305px;
+				
+			}
+			.d-userlog-background{
+				padding: 3px 0px 0 0px;
+				margin:10px 0px 10px 0px;
+				/* background: #ffffff;				 */
+				font-size:13px;
+				max-width: 280px;
+				
+			}
+			.d-userlog-background-sm{
+				padding: 0px 0px 0 0px;
+				margin:10px 0px 10px 0px;
+				background: #f3f7fa;				
+				font-size:13px;
+				max-width: 280px;
+				max-height: 50px;
+				
+			}
+			/* .d-news{
+				margin: 0px 0px 20px 0px;
+			} */
+			.md-button.md-fab.d-search{
+				/* width: 4rem;
+				height:4rem; */
+			}
+			.d-search{
+			 background-color: #ee3d42;
+				width: 30px;
+				height: 30px;
+				border-radius: 0px 5px 5px 0px;
+				}
+			.gsc-search-button-v2{
+				padding:3px 3px !important;
+				width:25px !important;
+				height:25px !important;
+				}
+			.form-control.d-search-placeholder{
+				height: 30px;
+				border-radius: 5px 0px 0px 5px;
+				}
+			.md-button.md-fab{
+				width: 8rem;
+				height: 8rem;
+			}
+			.md-button.md-fab.d-avatar{
+				width: 5rem;
+				height: 5rem;
+			}
+			.md-button.md-fab.d-icon{
+				width: 8rem;
+				height:8rem;
+				padding:0px 0px 0px 0px;
+			}
+			.md-button.md-fab.d-avatar-sm{
+				width: 4rem;
+				height: 4rem;
+				margin: 0px 10px 10px 10px;
+				padding:0px 0px 0px 0px;
+			}
+			.md-button.md-fab.d-avatar-sm md-icon{
+				width: 25px;
+				height: 25px;
+			}
+			md-autocomplete{
+				height:30px;
+				border-radius: 5px 0px 0px 5px;
+				background: #f3f7fa;
+			}
+			md-icon{
+				width: 40px;
+				height: 40px;
+			}
+			
+			.d-icon md-icon{
+				width: 55px;
+				height: 55px;
+				padding:19px 0px 0px 0px;
+			}
+			.d-icon .d-special md-icon{
+				width: 90px;
+				height: 90px;
+				padding:8px 0px 0px 0px;
+			}
+			.boxes-log-in {
+				border:1px solid #DDD; margin-bottom: 95px;  margin-top: 95px; color: #000; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; padding-bottom:10px; padding-right:10px;  background: rgba(223, 231, 242, 0.80); height: 250px;
+				width: 100%;
+				}
+				.contact-box15 .contact-box-form .contact-box-line {
+					padding: 15px 3%;
+					width: 100%;
+					border-radius: 6px;
+					border: 1px solid #dcdcdc; 
+					margin-bottom: 20px;
+					}
+					.contact-box15 .btn{
+						border-color: #337AB7;
+						  background-color: #8dc9dc;
+						  background-color: rgba(223, 231, 242, 0.90);
+						  -moz-border-radius: 20px;
+						  -webkit-border-radius: 20px;
+						  -khtml-border-radius: 20px;
+						  -o-border-radius: 20px;
+						  -ms-border-radius: 20px;
+						  border-radius: 20px;
+						  color: #505050;
+						  font-size: 14px;
+						  width: 125px;
+					}
+			.contact-box15 .contact-box-form .contact-box-line:focus,
+			.contact-box15 .contact-box-form .contact-box-area:focus {
+				border: 1px solid #45c9c3;
+					}
+					.contact-box15 .contact-box-form .contact-box-area {
+						padding: 15px 3%;
+						width: 80%;
+						border: 1px solid #dcdcdc; 
+						resize: none;
+						border-radius: 6px;
+						margin-bottom: 20px;
+						height: 132px;
+					}
+				
+					h3 {
+					font-family: 'Open Sans', Arial, sans-serif;
+					font-weight: 300;
+					line-height: 1.5em;
+					margin-bottom: 18px;
+					text-transform: uppercase;
+					font-size: 14px;
+					}
