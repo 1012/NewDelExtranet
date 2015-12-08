@@ -24,6 +24,15 @@
 				color: #428bca;
 				cursor: auto;
 				}
+				a>h3{
+				font-size: 14px;
+				color: #000000;
+				margin-bottom: 18px;
+				text-transform: none;
+				font-family: 'Arial', sans-serif;
+				font-weight: 300;
+				line-height: 1.6em;
+				}
 			h3>h4 {
 				font-size: 14px;
 				color: #000000;
